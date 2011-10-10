@@ -1,4 +1,4 @@
-<p>This page showcases many of my Class Projects at the Pennsylvania State University:</p>
+<p>This page showcases many of my Class Projects at the Pennsylvania State University, where I studied Computer Science Engineering:</p>
 
 <h3>Computer Science & Engineering</h3>
 <ul class="courses">

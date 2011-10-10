@@ -30,6 +30,7 @@ margin: 0 -20px; /* negative indent the amount of the padding to maintain the gr
 
 #work_history { list-style: none; margin-left: 10px }
 #work_history .job_title { font-size: 13px; color: blue}
+#work_history .location { padding-bottom: 15px; }
 
 /* Iphone Scroller */
 #iphone_background {
