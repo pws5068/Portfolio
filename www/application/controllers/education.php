@@ -28,5 +28,5 @@ class Education extends CI_Controller {
 	}
 }
 
-/* End of file professional.php */
-/* Location: ./application/controllers/professional.php */
+/* End of file education.php */
+/* Location: ./application/controllers/education.php */

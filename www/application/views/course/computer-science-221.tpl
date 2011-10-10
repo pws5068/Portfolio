@@ -25,3 +25,5 @@
 	<li>Graphical Scrabble Gamerooms and Game Servers Implementation</li>
 	<li>JSP Website Showcase & Java Applet Conversions</li>
 </ul>
+
+<img src="/image/content/screen_shots/psu/scrabble_small.png" alt="Java Scrabble">
