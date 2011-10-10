@@ -26,7 +26,7 @@
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/professional">Professional</a></li>
-            <li><a href="#/education">Education</a></li>
+            <li><a href="/education">Education</a></li>
 			<li><a href="#/adventures">Adventures</a></li>
             <li><a href="#/contact">Contact</a></li>
           </ul>
