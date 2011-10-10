@@ -2,6 +2,11 @@
 
 class Iphone extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+		$this->smarty->addOnload("$('#screens').cycle({ fx: 'scrollLeft' });");
+	}
 	public function storyboarder()
 	{
 		$this->smarty->assign('large_header_text','StoryBoarder');

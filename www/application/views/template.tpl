@@ -22,7 +22,7 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="">Paul Silvis</a>
+          <a class="brand" href="/">Paul Silvis</a>
           <ul class="nav">
             <li><a href="/">Home</a></li>
             <li><a href="/professional">Professional</a></li>
