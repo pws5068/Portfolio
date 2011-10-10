@@ -13,14 +13,14 @@ require_once(BASEPATH.'smarty/Smarty.class.php' );
 
 class CI_Smarty extends Smarty {
 
+	private $jquery_onload;
+
 	function __construct()
 	{
 		parent::__construct();
 		
 		$this->template_dir =  APPPATH . 'views/';
 		$this->compile_dir =  APPPATH . 'cache/'; //use CIÕs cache folder
-		
-		//echo(file_get_contents($this->template_dir.'/template.tpl'));exit();
 
 		// Assign CodeIgniter object by reference to CI
 		if ( method_exists( $this, 'assignByRef') )
@@ -29,9 +29,8 @@ class CI_Smarty extends Smarty {
 			$this->assignByRef("ci", $ci);
 		}
 
-		log_message('debug', "Smarty Class Initialized");
+		$this->jquery_onload = '';
 	}
-
 
 	/**
 	 *  Parse a template using the Smarty engine
@@ -51,16 +50,25 @@ class CI_Smarty extends Smarty {
 	 * @param	bool
 	 * @return	string
 	 */
+	function addOnload($onload)
+	{
+		$this->jquery_onload .= $onload;
+	}
 	function view($template='template.tpl', $data = array(), $return = FALSE)
 	{
+		if(ENVIRONMENT == 'development')
+		{
+			$this->caching = 0;
+		}
 		foreach ($data as $key => $val)
 		{
 			$this->assign($key, $val);
 		}
 		
+		$this->assign('jquery_onload',$this->jquery_onload);
+		
 		if ($return == FALSE)
 		{
-			//die("template = $this->template_dir $template ");
 			$CI =& get_instance();
 			if (method_exists( $CI->output, 'set_output' ))
 			{
@@ -74,7 +82,6 @@ class CI_Smarty extends Smarty {
 		}
 		else
 		{
-		die("template = $template");
 			return $this->fetch($this->template_dir.'/'.$template);
 		}
 	}

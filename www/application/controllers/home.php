@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 		$this->smarty->assign('large_header_text','Mobile &amp; Web Developer');
 		$this->smarty->assign('small_header_text','San Francisco');
 		$this->smarty->assign('page_content','toplevel/home.tpl');
+			
 		$this->smarty->view('template.tpl');
 	}
 }

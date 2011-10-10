@@ -8,9 +8,15 @@
     <meta name="author" content="Paul Silvis">
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
+{if $jquery_onload neq ''}
+	<script type="text/javascript">$(document).ready(function() {ldelim}{$jquery_onload}{rdelim});</script>
+{/if}
   </head>
   <body>
     <div class="topbar">
