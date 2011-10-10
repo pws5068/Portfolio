@@ -1,9 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Contact extends CI_Controller {
-
+	
 	public function index()
 	{
+		$this->smarty->addOnload('$("#toplevel_contact").addClass("active");');
 		$this->smarty->assign('large_header_text','Contact Me');
 		$this->smarty->assign('small_header_text','');
 		$this->smarty->assign('page_content','toplevel/contact.tpl');

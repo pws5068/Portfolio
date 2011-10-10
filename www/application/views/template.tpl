@@ -24,11 +24,11 @@
         <div class="container">
           <a class="brand" href="/">Paul Silvis</a>
           <ul class="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/professional">Professional</a></li>
-            <li><a href="/education">Education</a></li>
-			<li><a href="/adventures">Adventures</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li id="toplevel_home"><a href="/">Home</a></li>
+            <li id="toplevel_professional"><a href="/professional">Professional</a></li>
+            <li id="toplevel_education"><a href="/education">Education</a></li>
+			<li id="toplevel_adventures"><a href="/adventures">Adventures</a></li>
+            <li id="toplevel_contact"><a href="/contact">Contact</a></li>
           </ul>
           
         </div>
