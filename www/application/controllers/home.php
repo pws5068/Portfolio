@@ -4,7 +4,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home');
+		$this->smarty->assign('header_text','Recent Projects &amp; Tinkering');
+		$this->smarty->assign('page_content','home.tpl');
+		$this->smarty->view('template.tpl');
 	}
 }
 

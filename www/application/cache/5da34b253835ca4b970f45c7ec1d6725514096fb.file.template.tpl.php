@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.3, created on 2011-10-10 03:53:11
+         compiled from "application/views/template.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20965175794e926c274454d8-57438774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5da34b253835ca4b970f45c7ec1d6725514096fb' => 
+    array (
+      0 => 'application/views/template.tpl',
+      1 => 1318211549,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '20965175794e926c274454d8-57438774',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'header_text' => 0,
+    'page_content' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.3',
+  'unifunc' => 'content_4e926c274fce6',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_4e926c274fce6')) {function content_4e926c274fce6($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,13 +38,11 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-
   <body>
-
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="<?=$_SERVER['PHP_SELF']?>">Paul Silvis</a>
+          <a class="brand" href="">Paul Silvis</a>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#professional">Professional</a></li>
@@ -39,16 +63,14 @@
         </div>
         <div class="row">
           <div class="span10">
-            <h2>Recent Projects &amp; Tinkering</h2>
-            
+            <h2><?php echo $_smarty_tpl->tpl_vars['header_text']->value;?>
+</h2>
+            <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['page_content']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
           </div>
           <div class="span4">
-            <h3>What's to know?</h3>
-            <ul class="media-grid">
- 			 <li><a href="#"><img class="thumbnail" src="/image/content/me.png" alt="Paul Silvis"></a></li>
- 			</ul>
- 			
- 			Lorem Ipsum..
+            <?php echo $_smarty_tpl->getSubTemplate ("right_content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
           </div>
         </div>
       </div>
@@ -58,6 +80,6 @@
       </footer>
 
     </div> <!-- /container -->
-
   </body>
 </html>
+<?php }} ?>
