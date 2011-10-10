@@ -4,8 +4,9 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->smarty->assign('header_text','Recent Projects &amp; Tinkering');
-		$this->smarty->assign('page_content','home.tpl');
+		$this->smarty->assign('large_header_text','Mobile &amp; Web Developer');
+		$this->smarty->assign('small_header_text','San Francisco');
+		$this->smarty->assign('page_content','toplevel/home.tpl');
 		$this->smarty->view('template.tpl');
 	}
 }

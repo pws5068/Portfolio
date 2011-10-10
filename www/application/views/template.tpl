@@ -18,11 +18,11 @@
         <div class="container">
           <a class="brand" href="">Paul Silvis</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#professional">Professional</a></li>
-            <li><a href="#about">Education</a></li>
-			<li><a href="#about">Adventures</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/professional">Professional</a></li>
+            <li><a href="#/education">Education</a></li>
+			<li><a href="#/adventures">Adventures</a></li>
+            <li><a href="#/contact">Contact</a></li>
           </ul>
           
         </div>
@@ -33,11 +33,10 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Mobile &amp; Web Developer <small>San Francisco</small></h1>
+          <h2>{ldelim} {$large_header_text} {rdelim} <small>{$small_header_text}</small></h2>
         </div>
         <div class="row">
           <div class="span10">
-            <h2>{$header_text}</h2>
             {include file=$page_content}
           </div>
           <div class="span4">
@@ -47,7 +46,7 @@
       </div>
 
       <footer>
-        <p>&copy; Paul Silvis 2011</p>
+        <p>&copy; Paul Silvis 2011 - <a href="http://www.paulsilvis.com/">PaulSilvis.com</a></p>
       </footer>
 
     </div> <!-- /container -->

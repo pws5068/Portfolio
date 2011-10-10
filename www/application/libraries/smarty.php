@@ -51,7 +51,7 @@ class CI_Smarty extends Smarty {
 	 * @param	bool
 	 * @return	string
 	 */
-	function view($template, $data = array(), $return = FALSE)
+	function view($template='template.tpl', $data = array(), $return = FALSE)
 	{
 		foreach ($data as $key => $val)
 		{
