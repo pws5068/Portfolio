@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-alerts.js"></script>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,6 +44,15 @@
         </div>
         <div class="row">
           <div class="span10">
+          {if isset($error_dialog) && $error_dialog neq ''}
+        <div id="alert_div" class="alert-message warning">
+		  <p><strong>Sorry: </strong> {$error_dialog}</p>
+		</div>
+		{elseif isset($success_dialog) && $success_dialog neq ''}
+		<div id="alert_div" class="alert-message success">
+		  <p>{$success_dialog}</p>
+		</div>
+		{/if}
             {include file=$page_content}
           </div>
           <div class="span4">

@@ -13,6 +13,8 @@ require_once(BASEPATH.'smarty/Smarty.class.php' );
 
 class CI_Smarty extends Smarty {
 
+	private $error;
+	private $success;
 	private $jquery_onload;
 
 	function __construct()
@@ -54,6 +56,26 @@ class CI_Smarty extends Smarty {
 	{
 		$this->jquery_onload .= $onload;
 	}
+	function setSuccess($success)
+	{
+		if(strlen($this->success) > 0)
+		{
+			$this->success .= '<br>';
+		}
+		
+		$this->success .= $success;
+	}
+	function setError($error)
+	{
+		if(strlen($this->error) > 0)
+		{
+			$this->error .= '<br>';
+		}
+		
+		$this->error .= $error;
+		
+		//$this->success = ''; // Clear former successes?
+	}
 	function view($template='template.tpl', $data = array(), $return = FALSE)
 	{
 		if(ENVIRONMENT == 'development')
@@ -65,6 +87,8 @@ class CI_Smarty extends Smarty {
 			$this->assign($key, $val);
 		}
 		
+		$this->assign('error_dialog',$this->error);
+		$this->assign('success_dialog',$this->success);
 		$this->assign('jquery_onload',$this->jquery_onload);
 		
 		if ($return == FALSE)
