@@ -15,3 +15,10 @@
 	<li><a href="/education/engineering-entrepreneurship-425">New Venture Creation</a> (Engineering 425)</li>
 	<li><a href="/education/engineering-entrepreneurship-407">Technology Entrepreneurship</a>	(Engineering 407)</li>
 </ul>
+<h3>Involvement</h3>
+<ul class="involvement">
+	<li>Outing &amp; Adventure Club President</li>
+	<li>Student Government Senator</li>
+	<li>Center for Entrepreneurial Education Services (CETER) Team</li>
+	<li>Homecoming Technology Captain</li>
+</ul>

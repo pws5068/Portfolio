@@ -9,7 +9,8 @@
  * @author		Kepler Gelotte
  * @link		http://www.coolphptools.com/codeigniter-smarty
  */
-require_once(BASEPATH.'smarty/Smarty.class.php' );
+require(BASEPATH.'smarty/Smarty.class.php' );
+require(APPPATH.'helpers/site.php');
 
 class CI_Smarty extends Smarty {
 
@@ -76,6 +77,15 @@ class CI_Smarty extends Smarty {
 		
 		//$this->success = ''; // Clear former successes?
 	}
+	function setHeader($large_text,$small_text='')
+	{
+		$this->assign('large_header_text',$large_text);
+		$this->assign('small_header_text',$small_text);
+	}
+	function setContent($template)
+	{
+		$this->assign('page_content',$template.'.tpl');
+	}
 	function view($template='template.tpl', $data = array(), $return = FALSE)
 	{
 		if(ENVIRONMENT == 'development')
@@ -90,6 +100,7 @@ class CI_Smarty extends Smarty {
 		$this->assign('error_dialog',$this->error);
 		$this->assign('success_dialog',$this->success);
 		$this->assign('jquery_onload',$this->jquery_onload);
+		$this->assign('random_quote',getRandomQuote());
 		
 		if ($return == FALSE)
 		{

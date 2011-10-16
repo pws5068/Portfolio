@@ -37,7 +37,6 @@
     </div>
 
     <div class="container">
-
       <div class="content">
         <div class="page-header">
           <h2>{ldelim} {$large_header_text} {rdelim} <small>{$small_header_text}</small></h2>

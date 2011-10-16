@@ -11,3 +11,5 @@
 		<li>Twitter: <a href="http://www.twitter.com/paulsilvis">@PaulSilvis</a></li>
 	</ul>
 </p>
+
+<p class="quotes"><strong>Random Quote:</strong><br>{$random_quote['quote']}<br><br>- {$random_quote['source']}</p>
