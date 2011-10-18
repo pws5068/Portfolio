@@ -5,4 +5,4 @@
 <p>Rock Sport Nation is an interactive (theoretical) store for climbing enthusiasts. We designed our platform using an elegant combination of PHP, MySQL, Smarty, jQuery and other modern technologies.</p>
 
 <h3>Availability</h3>
-<p>The site is online now at <a href="http://www.rsncorp.com">RSNCorp.com</a>;although we don't actually accept orders.  With the proper suppliers, RSNCorp could flip a switch and go live tomorrow.</p>
+<p>The site is online now at <a href="http://www.rsncorp.com">RSNCorp.com</a>; although we don't actually accept orders.  With the proper suppliers, RSNCorp could flip a switch and go live tomorrow.</p>

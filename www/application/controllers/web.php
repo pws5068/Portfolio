@@ -28,6 +28,13 @@ class Web extends CI_Controller {
 		
 		$this->smarty->view();
 	}
+	public function rsncorp()
+	{
+		$this->smarty->setHeader('Rock Sport Nation','Penn State Project');
+		$this->smarty->setContent('web/rsncorp');
+		
+		$this->smarty->view();
+	}
 }
 
 /* End of file iphone.php */
