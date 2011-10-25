@@ -37,6 +37,7 @@ class Contact extends CI_Controller {
 	        }
 		}
 		$this->smarty->addOnload('$("#toplevel_contact").addClass("active");');
+		
 		$this->smarty->assign('large_header_text','Contact Me');
 		$this->smarty->assign('small_header_text','');
 		$this->smarty->assign('page_content','toplevel/contact.tpl');

@@ -17,6 +17,8 @@ class CI_Smarty extends Smarty {
 	private $error;
 	private $success;
 	private $jquery_onload;
+	private $stylesheets;
+	private $js_files;
 
 	function __construct()
 	{
@@ -33,6 +35,8 @@ class CI_Smarty extends Smarty {
 		}
 
 		$this->jquery_onload = '';
+		$this->stylesheets = array();
+		$this->js_files = array();
 	}
 
 	/**
@@ -86,6 +90,14 @@ class CI_Smarty extends Smarty {
 	{
 		$this->assign('page_content',$template.'.tpl');
 	}
+	function addStylesheet($stylesheet_path)
+	{
+		$this->stylesheets[] = $stylesheet_path;
+	}
+	function addJSFile($file_path)
+	{
+		$this->js_files[] = $file_path;
+	}
 	function view($template='template.tpl', $data = array(), $return = FALSE)
 	{
 		if(ENVIRONMENT == 'development')
@@ -101,6 +113,8 @@ class CI_Smarty extends Smarty {
 		$this->assign('success_dialog',$this->success);
 		$this->assign('jquery_onload',$this->jquery_onload);
 		$this->assign('random_quote',getRandomQuote());
+		$this->assign('stylesheets',$this->stylesheets);
+		$this->assign('js_files',$this->js_files);
 		
 		if ($return == FALSE)
 		{

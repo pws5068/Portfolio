@@ -19,6 +19,6 @@
 <ul class="involvement">
 	<li>Outing &amp; Adventure Club President</li>
 	<li>Student Government Senator</li>
-	<li>Center for Entrepreneurial Education Services (CETER) Team</li>
+	<li>Center for Entrepreneurial Education Services (CETES) Team</li>
 	<li>Homecoming Technology Captain</li>
 </ul>

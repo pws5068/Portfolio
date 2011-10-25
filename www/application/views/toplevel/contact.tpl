@@ -24,7 +24,7 @@
 
 	<div class="actions">
 		<div class="right_btns" style="float:right">
-			<input type="button" name="Clear" value="clear" class="btn">
+			<input type="reset" id="clear_btn" name="Clear" value="clear" class="btn">
 			<input type="submit" name="Send" value="submit" class="btn primary">
 		</div>
 		<br><br>
