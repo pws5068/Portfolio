@@ -20,5 +20,5 @@
 	<li>Outing &amp; Adventure Club President</li>
 	<li>Student Government Senator</li>
 	<li>Center for Entrepreneurial Education Services (CETES) Team</li>
-	<li>Homecoming Technology Captain</li>
+	<li>Homecoming Technology Captain, 2010</li>
 </ul>

@@ -6,7 +6,7 @@ class Education extends CI_Controller {
 	{
 		$this->smarty->addOnload('$("#toplevel_education").addClass("active");');
 		$this->smarty->assign('large_header_text','Educational Background');
-		$this->smarty->assign('small_header_text','Computer Science &amp; Engineering');
+		$this->smarty->assign('small_header_text','Penn State Computer Science &amp; Engineering');
 		$this->smarty->assign('page_content','toplevel/education.tpl');
 		$this->smarty->view();
 	}

@@ -1,7 +1,7 @@
 <h3>Work History:</h3>
 
 <ul id="work_history">
-	<li class="job_title">Sincerely, Inc: Software Engineer</li>
+	<li class="job_title"><a href="/professional/sincerely/">Sincerely, Inc: Software Engineer</a></li>
 	<li class="timeline">May 2011 - Present</li>
 	<li class="location">San Francisco, CA</li>
 
@@ -29,7 +29,7 @@
 <h3>Leadership:</h3>
 <ul>
 	<li>Eagle Scout Award</li>
-	<li>2011 Smeal Idea Pitch First Place</li>
+	<li><a href="/education/smeal-idea-pitch">2011 Smeal Idea Pitch First Place</a></li>
 	<li>2011 Pennsylvania State University Homecoming Technology Captain</li>
 	<li>Penn State Fayette Outing & Adventure Club President: Aug. 2007 - Jan. 2009</li>
 	<li>CETES Leadership Team & Dynamic Website Design (Entrepreneurship)</li>

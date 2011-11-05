@@ -1,5 +1,10 @@
 <h3>Reaching Out</h3>
-<p>If you would like to get in touch, you may contact me through the form below, or directly via email -  &#112;&#097;&#117;&#108;&#064;&#115;&#105;&#110;&#099;&#101;&#114;&#101;&#108;&#121;&#046;&#099;&#111;&#109;</p>
+<p>If you would like to get in touch, you may contact me through the form below, or directly via email -  &#112;&#097;&#117;&#108;&#064;&#115;&#105;&#110;&#099;&#101;&#114;&#101;&#108;&#121;&#046;&#099;&#111;&#109;.
+<br /><br />
+
+Additionally, you can get in touch with me through <a href="http://www.linkedin.com/in/paulsilvis">LinkedIn</a>.</p>
+
+<br />
 
 <form name="ctfrm" class="ctfrm" method="post" action="/contact/">
 	
