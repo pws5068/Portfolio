@@ -9,7 +9,7 @@ class Home extends CI_Controller {
 		$this->smarty->assign('small_header_text','San Francisco, CA');
 		$this->smarty->assign('page_content','toplevel/home.tpl');
 			
-		$this->smarty->view('template.tpl');
+		$this->smarty->view();
 	}
 }
 
