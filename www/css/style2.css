@@ -13,16 +13,30 @@ margin: 0 -20px; /* negative indent the amount of the padding to maintain the gr
 .blue_header {
 	background: url('/image/layout/bg/blue_black_grad.png') 0 0 #36B3D7;
 	background-repeat: repeat-x;
-	height:90px;
+	height:75px;
 	padding: 10px 0px 0px 100px;
-}
-.content {
-	
+	border-bottom: white;
 }
 
 h1 { color: #fff; text-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.3); font-weight: bold; margin-left:50px; padding: 15px;}
-h1 small { color: #G6540e; font-weight: bold; }
-h2 { text-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.3);}
+h1 small { color: #CCC; font-weight: bold; }
+h2 { text-shadow: 0px 1px 1px hsla(0, 0%, 0%, 0.3); color: #404040}
+
+.thumbnail:hover { opacity: 20% }
+
+.quotes { margin: 0px -20px 20px; padding: 0 25px 0 45px; color: #BBB }
+
+#right_col_list { list-style: none; margin-left: 8px }
+#right_col_list li { }
+#right_col_list .clear { padding-bottom: 20px; }
+
+#work_history { list-style: none; margin-left: 10px }
+#work_history .job_title { font-size: 13px; color: #000}
+#work_history .location { padding-bottom: 15px; }
+
+.quotes { color: #000 }
+
+.actions { background-color: transparent; }
 
 /* Iphone Scroller */
 #iphone_background {

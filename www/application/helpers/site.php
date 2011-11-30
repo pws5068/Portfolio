@@ -23,6 +23,8 @@ function getRandomQuote()
 
 	$quotes[] = array("quote" =>"Hell, there are no rules here - we're trying to accomplish something.","source"=>"Thomas Edison ");
 
+	$quotes[] = array("quote" =>"Innovation distinguishes between a leader and a follower.","source"=>"Steve Jobs");
+	
 	$rand = rand(0,sizeOf($quotes) -1);
 
 	return $quotes[$rand];
