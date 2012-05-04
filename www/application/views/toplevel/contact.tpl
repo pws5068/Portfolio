@@ -25,7 +25,7 @@ Additionally, you can get in touch with me through <a href="http://www.linkedin.
 	
 	<label for="message_area">Message: </label>
 	<div class="input"><textarea name="message_area" class="xlarge" rows="4"></textarea></div>
-	<br><br>
+	<br>
 
 	<div class="actions">
 		<div class="right_btns" style="float:right">

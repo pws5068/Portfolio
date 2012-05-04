@@ -98,7 +98,7 @@ class CI_Smarty extends Smarty {
 	{
 		$this->js_files[] = $file_path;
 	}
-	function view($template='template.tpl', $data = array(), $return = FALSE)
+	function view($template='template2.tpl', $data = array(), $return = FALSE)
 	{
 		if(ENVIRONMENT == 'development')
 		{
@@ -115,7 +115,7 @@ class CI_Smarty extends Smarty {
 		$this->assign('random_quote',getRandomQuote());
 		$this->assign('stylesheets',$this->stylesheets);
 		$this->assign('js_files',$this->js_files);
-		
+	
 		if ($return == FALSE)
 		{
 			$CI =& get_instance();

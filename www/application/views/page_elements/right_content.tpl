@@ -12,4 +12,4 @@
 	</ul>
 </p>
 
-<p class="quotes"><span class="title">Random Quote:</span><br>{$random_quote['quote']}<br><br>- {$random_quote['source']}</p>
+<p class="quotes"><span class="title"></span><br>{$random_quote['quote']}<br><br>- {$random_quote['source']}</p>

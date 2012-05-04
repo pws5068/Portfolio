@@ -53,4 +53,9 @@
       <img class="thumbnail" src="/image/content/activities/wakeboarding/wakeboarding_thumb.png" alt="Wakeboarding in FL">
     </a>
   </li>
+  <li>
+    <a class="view_full_size" href="/image/content/activities/rafting/whitewater1_large.png" rel="group1">
+      <img class="thumbnail" src="/image/content/activities/rafting/whitewater1_thumb.png" alt="White Water Rafting on the Yough">
+    </a>
+  </li>
 </ul>

@@ -2,7 +2,7 @@
 
 <p>The goal of this project was to present our users with a simple &amp; elegant way to design a photo collage.  Ultimately, these users are given a means to tell their story through a series of photos.  They are then presented with the option to Print &amp; Ship their creations with the help of the <a href="http://dev.sincerely.com/">Sincerely Ship</a> Library.
 </p>
-<img src="/image/content/paul_storyboarder_icon_med.jpg" style="margin-left:100px">
+<img class="thumbnail" src="/image/content/paul_storyboarder_icon_med.jpg" style="margin-left:100px">
 <p>Although Storyboarder was released on the same day as <a href="/iphone/lonely_planet_postcards">Lonely Planet Postcards</a>, this app was designed first; making it my debut into the Objective-C world.</p>
 
 <div id="iphone_background">
