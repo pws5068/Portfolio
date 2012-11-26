@@ -1,0 +1,5 @@
+<h3>Software Language Design</h3>
+
+<p>During this course, I took on the role of a programming language designer.  First, the exact interpretation and syntax requirements needed to be explicitly defined using context-free grammars.  Then, I used the highly-recursive language Scheme to develop parsers and evaluation routines for a new programming language with limited features.  As the semester progressed, more complicated and nested capabilities were designed into the language.</p>
+
+<p>For example, a With clause was created similar to the Let function in scheme.  This function would assign a value to a variable and, it would substitute every nested occurrence using an eager evaluation routine.  This class introduced additional concepts such as mutual recursion and anonymous (lambda) functions.</p>

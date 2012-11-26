@@ -34,3 +34,9 @@ But, the problem remained .. with no motion sensor how could I hide conspicuousl
 the alarm? Easy. By selecting a button as large and irresistable as possible :) 
 
 {% img /images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg 450 %}
+
+The photo above was taken from the entrance to the Sincerely Halloween Party's haunted
+maze.  I used a portable battery pack to power the Arduino & let it loose.
+
+Leds in the button glowed with temptation & any time someone entering fell for the trap 
+everyone at the event in the neighboring room got a good laugh.
