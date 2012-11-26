@@ -40,3 +40,56 @@ maze.  I used a portable battery pack to power the Arduino & let it loose.
 
 Leds in the button glowed with temptation & any time someone entering fell for the trap 
 everyone at the event in the neighboring room got a good laugh.
+
+```c
+    #define R_LED 5 //The pin # of the red LED
+    #define Y_LED 6 // The pin # of the Yellow LED
+    #define SPEAKER 3 //The pin # of the speaker
+    #define BUTTON 7 //The pin # of the button
+
+    int i = 0;
+    int state = 0; //The on/off state of our siren.
+
+    void setup()
+    {
+      pinMode(R_LED, OUTPUT);
+      pinMode(Y_LED, OUTPUT);
+      pinMode(SPEAKER, OUTPUT);
+      pinMode(BUTTON, INPUT);
+      Serial.begin(9600); 
+    }
+
+    void loop()
+    {
+      //Save the buttons state
+      state = digitalRead(BUTTON);
+      
+      //If the siren is on...
+      if (state == 1)
+      {
+        Serial.println("STATE = 1");
+
+        //Flash LED and Speaker on and off.
+        for(i = 1; i <= 2; i++)
+        {
+          analogWrite(Y_LED, 0);
+          analogWrite(R_LED, 255);
+          analogWrite(SPEAKER, 0);
+          delay(50);
+          analogWrite(Y_LED, 255);
+          delay(50);
+          analogWrite(R_LED, 0);
+          analogWrite(Y_LED, 255);
+          analogWrite(SPEAKER, 0);
+          delay(400);
+        }
+      }
+      else {
+        //Turn of the speaker
+        analogWrite(SPEAKER, 0);
+        //Turn of the LED
+        analogWrite(R_LED, 0);
+        analogWrite(Y_LED, 0);
+      }
+    }
+```
