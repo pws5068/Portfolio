@@ -9,7 +9,7 @@ categories: hacks
 {% img left /images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg 280 %}
 
 I wanted to try something a little different for Halloween this year, 
-and I've certainly been looking to get my hands dirty with more arduino hacking projects.  
+and I've been looking to get my hands dirty with more arduino hacking projects.  
 
 Of course, I'm not the first person to consider hacking a pumpkin so I took to 
 the internet for some inspiration.
@@ -38,8 +38,8 @@ the alarm? Easy. By selecting a button as large and irresistable as possible :)
 The photo above was taken from the entrance to the Sincerely Halloween Party's haunted
 maze.  I used a portable battery pack to power the Arduino & let it loose.
 
-Leds in the button glowed with temptation & any time someone entering fell for the trap 
-everyone at the event in the neighboring room got a good laugh.
+LEDs in the button glowed with temptation & any time someone entering fell for the trap 
+everyone at the event in the got a good laugh.  The sketch was pretty simple:
 
 ```c
     #define R_LED 5 //The pin # of the red LED
