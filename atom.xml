@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Paul Silvis]]></title>
+  <link href="http://pws5068.github.com/Portfolio/atom.xml" rel="self"/>
+  <link href="http://pws5068.github.com/Portfolio/"/>
+  <updated>2012-12-30T21:47:00-08:00</updated>
+  <id>http://pws5068.github.com/Portfolio/</id>
+  <author>
+    <name><![CDATA[Paul Silvis]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Thoughtfulitics]]></title>
+    <link href="http://pws5068.github.com/Portfolio/blog/2012/12/17/thoughtfulitics/"/>
+    <updated>2012-12-17T23:34:00-08:00</updated>
+    <id>http://pws5068.github.com/Portfolio/blog/2012/12/17/thoughtfulitics</id>
+    <content type="html"><![CDATA[<p><a href="https://Sincerely.com">Sincerely Inc.</a> recently hosted our first Make-a-Thon.
+Similar in nature to a hack-a-thon, except that we wanted to make sure everyone
+in the company could participate.</p>
+
+<p>Each team had the opportunity to discuss ideas before the event, and we officially
+kicked off the event on Thursday at noon.  JJ Ford and myself teamed up, along with
+Zain Ali for some kick ass design work.</p>
+
+<!-- more -->
+
+
+<p>At Sincerely our mission is to make the world more thoughtful, and our
+philosophy is to make informed data-driven decisions. So, we decided to
+build an analytics engine around the thoughtfulness of our customers and
+the world.</p>
+
+<p>JJ and I chose to create the project in Rails for fast prototyping.</p>
+
+<p>As the project began I started building a network interface for Sincerely&#8217;s
+internal api and he discovered a quality JS liquid animation for our first graphic.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hack-o-Lantern]]></title>
+    <link href="http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern/"/>
+    <updated>2012-11-14T14:29:00-08:00</updated>
+    <id>http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
+
+<p>I wanted to try something a little different for Halloween this year,
+and I&#8217;ve been looking to get my hands dirty with more arduino hacking projects.</p>
+
+<p>Of course, I&#8217;m not the first person to consider hacking a pumpkin so I took to
+the internet for some inspiration.</p>
+
+<!-- more -->
+
+
+<p>The most intriguing project I came across was a <a href="http://www.instructables.com/id/Arduino-controlled-Silly-String-shooter/">pumpkin armed with silly string and a motion sensor</a>,
+but given the limited time on hand and dwindling inventory at the local radio shack I
+needed to come up with something different.</p>
+
+<p>Radio Shack did have one item in particular that caught my interest, a <a href="http://www.radioshack.com/product/index.jsp?productId=2062405">102dB Piezo Alarm</a>.</p>
+
+<p>That should suffice to scare the pants off any unsuspecting guests.  Using some google-fu I
+managed to find a person who had made a DIY from a very similar project .. <a href="http://blog.makezine.com/2012/10/26/make-the-scariest-pumpkin-ever/">except that he used a car horn</a>.  I suspect my neighbors would
+not approve.</p>
+
+<p>So I started wiring up the components available.</p>
+
+<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/arduino_breadboard.jpg" width="450"></p>
+
+<p>But, the problem remained .. with no motion sensor how could I hide conspicuously trigger
+the alarm? Easy. By selecting a button as large and irresistable as possible :)</p>
+
+<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg" width="450"></p>
+
+<p>The photo above was taken from the entrance to the Sincerely Halloween Party&#8217;s haunted
+maze.  I used a portable battery pack to power the Arduino &amp; let it loose.</p>
+
+<p>LEDs in the button glowed with temptation &amp; any time someone entering fell for the trap
+everyone at the event in the got a good laugh.  The sketch was pretty simple:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#define R_LED 5 </span><span class="c1">//The pin # of the red LED</span>
+</span><span class='line'><span class="cp">#define Y_LED 6 </span><span class="c1">// The pin # of the Yellow LED</span>
+</span><span class='line'><span class="cp">#define SPEAKER 3 </span><span class="c1">//The pin # of the speaker</span>
+</span><span class='line'><span class="cp">#define BUTTON 7 </span><span class="c1">//The pin # of the button</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="kt">int</span> <span class="n">state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//The on/off state of our siren.</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">pinMode</span><span class="p">(</span><span class="n">R_LED</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">pinMode</span><span class="p">(</span><span class="n">Y_LED</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">pinMode</span><span class="p">(</span><span class="n">SPEAKER</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">pinMode</span><span class="p">(</span><span class="n">BUTTON</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="c1">//Save the buttons state</span>
+</span><span class='line'>  <span class="n">state</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">BUTTON</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//If the siren is on...</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;STATE = 1&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//Flash LED and Speaker on and off.</span>
+</span><span class='line'>    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">Y_LED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">R_LED</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">SPEAKER</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">Y_LED</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">R_LED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">Y_LED</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">analogWrite</span><span class="p">(</span><span class="n">SPEAKER</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">delay</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//Turn of the speaker</span>
+</span><span class='line'>    <span class="n">analogWrite</span><span class="p">(</span><span class="n">SPEAKER</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">//Turn of the LED</span>
+</span><span class='line'>    <span class="n">analogWrite</span><span class="p">(</span><span class="n">R_LED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">analogWrite</span><span class="p">(</span><span class="n">Y_LED</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sincerely Office Climbing Wall]]></title>
+    <link href="http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall/"/>
+    <updated>2012-10-24T22:16:00-07:00</updated>
+    <id>http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
+
+<p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
+
+<!-- more -->
+
+
+<p>Now as it turned out, the concrete posts are actually in place to surround the support beam inside.  The concrete itself is very weak and is crumbling in various places.  So it wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.</p>
+
+<p>So (with my limited construction experience) I sketched out some plans to construct a wood frame tightly around the
+beam in it&#8217;s entirety.</p>
+
+<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="350" title="Rough Construction Plan" >
+<img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/cutting_lumber.jpg" width="350" title="Halfway Done" ></p>
+
+<p>The wall is designed to be supported only by frame itself, and is not anchored to the beam in any way.  The main concern here was that the frame could move when weighted.</p>
+
+<p>Fortunately we measured twice and cut once, the frame wrapped tightly around the support beam and is amazingly stable (even with 2 or 3 of us climbing at once).</p>
+
+<p>The plans weren&#8217;t perfect however, I made a calculation typo in the measurements of the plywood walls leaving a slight gap on one side of the pillar.  After a few paint touch ups the mistake is hardly noticeable and even provides another feature to use for certain climbing routes.</p>
+
+<p>I recruited some friends to help along with a coworker, the famous Doc Pop.  While he and I drilled &amp; assembled the frame, the girls prepared the panels.  They started by mixing some fine grained sand with the black paint we had chosen and adding several coats.  The texture worked out amazingly strong, clean and featured.</p>
+
+<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
+<img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg" width="300" title="Halfway Done" ></p>
+
+<p>Then they marked up the back of the panels with locations for our predrilled hold placement options.</p>
+
+<p>Doc drilled away at the back of the painted walls and then the finale.  We screwed all of the panels into the frame and wallah!  We had a climbing wall&#8230;. sans holds.</p>
+
+<p>Placing the holds was of course the most exciting part&#8230; and the moment of truth &#8230; standing on wall for the first time.  The climbing holds bolted in nicely and didn&#8217;t budge when weighted.  Success.</p>
+
+<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/gina_preparing_wall.jpg" width="300" title="Asdfsdf Done" >
+<img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="300" title="Asdfsdf Done" ></p>
+
+<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/completed_project.png" width="300">
+<img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg" width="300"></p>
+]]></content>
+  </entry>
+  
+</feed>
