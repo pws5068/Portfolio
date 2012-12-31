@@ -28,3 +28,8 @@ h2 {
   width: 120px;
   height: 250px;
 }
+.about_me img {
+  -moz-box-shadow: 3px 3px 4px #F1F1F1;
+  -webkit-box-shadow: 3px 3px 4px #F1F1F1;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+}
