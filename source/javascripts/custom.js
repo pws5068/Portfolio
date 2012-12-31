@@ -69,7 +69,7 @@ $(function(){
 
   github.showRepos({
     user: githubInfo.data('github-user'),
-    count: githubInfo.data('github-repo-count'),
+    count: 5, //githubInfo.data('github-repo-count'),
     skip_forks: githubInfo.data('github-skip-forks'),
     target: githubInfo 
   });

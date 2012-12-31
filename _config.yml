@@ -63,6 +63,9 @@ github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
+# Linkedin User
+linkedin_user: paulsilvis
+
 # Twitter
 twitter_user: paulsilvis
 twitter_tweet_count: 4
