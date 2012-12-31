@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://pws5068.github.com/Portfolio
+url: http://pws5068.github.com/
 title: Paul Silvis
 subtitle: Hacking all things hackable
 author: Paul Silvis
@@ -16,7 +16,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /Portfolio/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
@@ -63,8 +63,11 @@ github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
-# Linkedin User
+# Linkedin
 linkedin_user: paulsilvis
+
+# Stackoverflow
+stackoverflow_user: http://stackoverflow.com/users/214730/pws5068
 
 # Twitter
 twitter_user: paulsilvis
