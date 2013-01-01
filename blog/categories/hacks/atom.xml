@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hacks | Paul Silvis]]></title>
-  <link href="http://pws5068.github.com/Portfolio/blog/categories/hacks/atom.xml" rel="self"/>
-  <link href="http://pws5068.github.com/Portfolio/"/>
-  <updated>2012-12-31T00:28:18-08:00</updated>
-  <id>http://pws5068.github.com/Portfolio/</id>
+  <link href="http://paulsilvis.com/blog/categories/hacks/atom.xml" rel="self"/>
+  <link href="http://paulsilvis.com/"/>
+  <updated>2012-12-31T16:11:33-08:00</updated>
+  <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hack-o-Lantern]]></title>
-    <link href="http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern/"/>
+    <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern/"/>
     <updated>2012-11-14T14:29:00-08:00</updated>
-    <id>http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern</id>
+    <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
 
 <p>I wanted to try something a little different for Halloween this year,
@@ -114,9 +114,9 @@ void loop()
   
   <entry>
     <title type="html"><![CDATA[Sincerely Office Climbing Wall]]></title>
-    <link href="http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall/"/>
+    <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
-    <id>http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall</id>
+    <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
     <content type="html"><![CDATA[<p><img class="left" src="/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
 <p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>

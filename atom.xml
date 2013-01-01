@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Paul Silvis]]></title>
-  <link href="http://pws5068.github.com/Portfolio/atom.xml" rel="self"/>
-  <link href="http://pws5068.github.com/Portfolio/"/>
-  <updated>2012-12-31T00:28:18-08:00</updated>
-  <id>http://pws5068.github.com/Portfolio/</id>
+  <link href="http://paulsilvis.com/atom.xml" rel="self"/>
+  <link href="http://paulsilvis.com/"/>
+  <updated>2012-12-31T16:11:33-08:00</updated>
+  <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Thoughtfulitics]]></title>
-    <link href="http://pws5068.github.com/Portfolio/blog/2012/12/17/thoughtfulitics/"/>
+    <link href="http://paulsilvis.com/blog/2012/12/17/thoughtfulitics/"/>
     <updated>2012-12-17T23:34:00-08:00</updated>
-    <id>http://pws5068.github.com/Portfolio/blog/2012/12/17/thoughtfulitics</id>
+    <id>http://paulsilvis.com/blog/2012/12/17/thoughtfulitics</id>
     <content type="html"><![CDATA[<p><a href="https://Sincerely.com">Sincerely Inc.</a> recently hosted our first Make-a-Thon.
 Similar in nature to a hack-a-thon, except that we wanted to make sure everyone
 in the company could participate.</p>
@@ -43,10 +43,10 @@ internal api and he discovered a JS liquid animation for our first graphic.</p>
   
   <entry>
     <title type="html"><![CDATA[Hack-o-Lantern]]></title>
-    <link href="http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern/"/>
+    <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern/"/>
     <updated>2012-11-14T14:29:00-08:00</updated>
-    <id>http://pws5068.github.com/Portfolio/blog/2012/11/14/hack-o-lantern</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
+    <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
 
 <p>I wanted to try something a little different for Halloween this year,
 and I&#8217;ve been looking to get my hands dirty with more arduino hacking projects.</p>
@@ -69,12 +69,12 @@ not approve.</p>
 
 <p>So I started wiring up the components available.</p>
 
-<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/arduino_breadboard.jpg" width="450"></p>
+<p><img src="http://paulsilvis.com/images/posts/pages/hacks/arduino_hacking/arduino_breadboard.jpg" width="450"></p>
 
 <p>But, the problem remained .. with no motion sensor how could I hide conspicuously trigger
 the alarm? Easy. By selecting a button as large and irresistable as possible :)</p>
 
-<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg" width="450"></p>
+<p><img src="http://paulsilvis.com/images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg" width="450"></p>
 
 <p>The photo above was taken from the entrance to the Sincerely Halloween Party&#8217;s haunted
 maze.  I used a portable battery pack to power the Arduino &amp; let it loose.</p>
@@ -189,10 +189,10 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
   
   <entry>
     <title type="html"><![CDATA[Sincerely Office Climbing Wall]]></title>
-    <link href="http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall/"/>
+    <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
-    <id>http://pws5068.github.com/Portfolio/blog/2012/10/24/office-climbing-wall</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
+    <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
 <p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
 
@@ -204,8 +204,8 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
 <p>So (with my limited construction experience) I sketched out some plans to construct a wood frame tightly around the
 beam in it&#8217;s entirety.</p>
 
-<p><img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="350" title="Rough Construction Plan" >
-<img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/cutting_lumber.jpg" width="350" title="Halfway Done" ></p>
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="350" title="Rough Construction Plan" >
+<img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/cutting_lumber.jpg" width="350" title="Halfway Done" ></p>
 
 <p>The wall is designed to be supported only by frame itself, and is not anchored to the beam in any way.  The main concern here was that the frame could move when weighted.</p>
 
@@ -215,8 +215,8 @@ beam in it&#8217;s entirety.</p>
 
 <p>I recruited some friends to help along with a coworker, the famous Doc Pop.  While he and I drilled &amp; assembled the frame, the girls prepared the panels.  They started by mixing some fine grained sand with the black paint we had chosen and adding several coats.  The texture worked out amazingly strong, clean and featured.</p>
 
-<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
-<img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg" width="300" title="Halfway Done" ></p>
+<p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
+<img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg" width="300" title="Halfway Done" ></p>
 
 <p>Then they marked up the back of the panels with locations for our predrilled hold placement options.</p>
 
@@ -224,11 +224,11 @@ beam in it&#8217;s entirety.</p>
 
 <p>Placing the holds was of course the most exciting part&#8230; and the moment of truth &#8230; standing on wall for the first time.  The climbing holds bolted in nicely and didn&#8217;t budge when weighted.  Success.</p>
 
-<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/gina_preparing_wall.jpg" width="300" title="Asdfsdf Done" >
-<img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="300" title="Asdfsdf Done" ></p>
+<p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/gina_preparing_wall.jpg" width="300" title="Asdfsdf Done" >
+<img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="300" title="Asdfsdf Done" ></p>
 
-<p><img src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/completed_project.png" width="300">
-<img class="left" src="http://pws5068.github.com/Portfolio/images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg" width="300"></p>
+<p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/completed_project.png" width="300">
+<img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg" width="300"></p>
 ]]></content>
   </entry>
   
