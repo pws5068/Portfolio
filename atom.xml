@@ -4,11 +4,11 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2012-12-31T16:11:33-08:00</updated>
+  <updated>2012-12-31T16:49:34-08:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
-    
+    <email><![CDATA[paul@sincerely.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
