@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-01-19T22:11:33-08:00</updated>
+  <updated>2013-01-19T22:16:27-08:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Power of Habit]]></title>
-    <link href="http://paulsilvis.com/blog/2013/01/19/power-of-habit/"/>
-    <updated>2013-01-19T19:51:00-08:00</updated>
-    <id>http://paulsilvis.com/blog/2013/01/19/power-of-habit</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughtfulitics]]></title>
