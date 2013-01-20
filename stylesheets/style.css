@@ -1,0 +1,35 @@
+#hero h1 {
+  color: #DDD;
+  padding: 40px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 50px;
+}
+#hero h1 em {
+  color: #08C;
+}
+h2 { 
+  margin-bottom: 20px;
+}
+#hero {
+  background-image: url("/images/heroBackGlennPass.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: static;
+  height: 300px;
+  padding: 0px;
+}
+#front-wrapper {
+  margin-top: 0px;
+  z-index: 0;
+}
+.about_me {
+  float: left;
+  padding-right: 15px;
+  width: 120px;
+  height: 250px;
+}
+.about_me img {
+  -moz-box-shadow: 3px 3px 4px #F1F1F1;
+  -webkit-box-shadow: 3px 3px 4px #F1F1F1;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+}

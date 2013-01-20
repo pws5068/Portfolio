@@ -4,14 +4,23 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2012-12-31T16:49:34-08:00</updated>
+  <updated>2013-01-19T22:11:33-08:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
-    <email><![CDATA[paul@sincerely.com]]></email>
+    
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Power of Habit]]></title>
+    <link href="http://paulsilvis.com/blog/2013/01/19/power-of-habit/"/>
+    <updated>2013-01-19T19:51:00-08:00</updated>
+    <id>http://paulsilvis.com/blog/2013/01/19/power-of-habit</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Thoughtfulitics]]></title>
@@ -37,7 +46,12 @@ the world.</p>
 <p>JJ and I chose to create the project in Rails for fast prototyping.</p>
 
 <p>As the project began I started building a network interface for Sincerely&#8217;s
-internal api and he discovered a JS liquid animation for our first graphic.</p>
+internal api and he reverse engineered a JS liquid animation from the wild.</p>
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/thoughtfulitics/thoughtful_scale.png" width="600"></p>
+
+<p>On the live page, the gears above are turning and the thoughtful-juices are flowing..
+but you&#8217;ll just have to use your imagination ;-)</p>
 ]]></content>
   </entry>
   
@@ -46,9 +60,7 @@ internal api and he discovered a JS liquid animation for our first graphic.</p>
     <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern/"/>
     <updated>2012-11-14T14:29:00-08:00</updated>
     <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
-
-<p>I wanted to try something a little different for Halloween this year,
+    <content type="html"><![CDATA[<p>I wanted to try something a little different for Halloween this year,
 and I&#8217;ve been looking to get my hands dirty with more arduino hacking projects.</p>
 
 <p>Of course, I&#8217;m not the first person to consider hacking a pumpkin so I took to
@@ -56,6 +68,8 @@ the internet for some inspiration.</p>
 
 <!-- more -->
 
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
 
 <p>The most intriguing project I came across was a <a href="http://www.instructables.com/id/Arduino-controlled-Silly-String-shooter/">pumpkin armed with silly string and a motion sensor</a>,
 but given the limited time on hand and dwindling inventory at the local radio shack I
@@ -192,14 +206,14 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
     <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
-
-<p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
+    <content type="html"><![CDATA[<p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
 
 <!-- more -->
 
 
 <p>Now as it turned out, the concrete posts are actually in place to surround the support beam inside.  The concrete itself is very weak and is crumbling in various places.  So it wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.</p>
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
 <p>So (with my limited construction experience) I sketched out some plans to construct a wood frame tightly around the
 beam in it&#8217;s entirety.</p>
