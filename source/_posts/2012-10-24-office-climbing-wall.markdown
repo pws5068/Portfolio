@@ -6,13 +6,13 @@ comments: true
 categories: hacks
 ---
 
-{% img left /images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg 250 Halfway Done %}
-
 Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.
 
 <!-- more -->
 
 Now as it turned out, the concrete posts are actually in place to surround the support beam inside.  The concrete itself is very weak and is crumbling in various places.  So it wouldn't suffice to drill any concrete screws and expect them to support the load.
+
+{% img left /images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg 250 Halfway Done %}
 
 So (with my limited construction experience) I sketched out some plans to construct a wood frame tightly around the 
 beam in it's entirety.  
