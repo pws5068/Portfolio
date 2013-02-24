@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-02-23T22:05:53-08:00</updated>
+  <updated>2013-02-23T22:11:40-08:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -197,12 +197,9 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
     <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
-    <content type="html"><![CDATA[<p>Myself and a few coworkers set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
+    <content type="html"><![CDATA[<p>A few coworkers and I set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
 
-<!-- more -->
-
-
-<p>Now as it turned out, the concrete posts are actually in place to surround the support beam inside.  The concrete itself is very weak and is crumbling in various places.  So it wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.</p>
+<p>Now as it turned out, the concrete posts are actually in place to surround the support beam inside. <!-- more --> The concrete itself is very weak and is crumbling in various places.  So it wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
