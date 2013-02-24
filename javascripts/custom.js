@@ -73,12 +73,12 @@ $(function(){
     skip_forks: githubInfo.data('github-skip-forks'),
     target: githubInfo 
   });
-
+/*
   var $container = $('#post-container');
   $container.imagesLoaded(function(){
     $container.masonry({
-      itemSelector : '.span4'
+      itemSelector : '.span2'
     });
   });
-
+*/
 });
