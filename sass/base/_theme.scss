@@ -2,33 +2,41 @@
   background-color: none;
 }
 #hero {
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   width: 100%;
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: #08C;
-  /*background-image: url("/images/heroBackHiking.jpg");*/
   background-origin: padding-box;
   background-position: 0 0;
-  background-repeat: repeat;
   background-size: auto auto;
   margin: 0px;
-  padding: 50px 75px 75px 75px;
   z-index: -1;
   height: 350px;
+  /* Custom Styles */
+  background-image: url("/images/heroYosemiteView.jpg");
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: static;
+  height: 300px;
+  padding: 0px; /*padding: 50px 75px 75px 75px;*/
 }
 #hero-inner {
   font-family: 'Cantarell', sans-serif;
   margin-top: 0px;
 }
 #hero-inner h1 {
-  font-size: 60px;
+  /*font-size: 60px;*/
+  color: #08C;
+  padding: 40px;
+  background-color: rgba(0,0,0,0.75);
+  font-size: 50px;
 }
 #hero-inner em {
   font-style: normal;
   color: #99CDE3;
-  text-shadow: -1px -1px 2px #FAFAFA, 1px 1px 2px #070707;
+  //text-shadow: -1px -1px 2px #FAFAFA, 1px 1px 2px #070707;
+  text-shadow: none;
 }
 body {
   background-attachment: scroll;
@@ -61,13 +69,15 @@ article h1 {
 }
 #front-wrapper {
   background-color: #F1F1F1;
-  margin-top: 300px;
   border-top-color: white;
   border-top-style: solid;
   border-top-width: 1px;
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  /* custom styles */
+  margin-top: 0px; /* 300px; */
+  z-index: 0;
 }
 #archive-wrapper {
   background-color: #F1F1F1;
@@ -134,7 +144,12 @@ article h1 {
   border-bottom-width: 1px;
   box-shadow: 0 1px 0 0 #FFFFFF;
   padding: 20px;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
+}
+#side-bar {
+  padding: 2em;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #F1F1F1;
 }
 .social_icon {
   display: inline;
@@ -152,6 +167,7 @@ dt .social_icon {
 }
 .article-format {
   padding: 2em;
+  height: 380px;
 }
 .archive-article-format {
   padding: 1em;
@@ -159,7 +175,7 @@ dt .social_icon {
 #footer-widgets {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: #FFFFFF;
+  background-color: #F1F1F1;
   background-image: none;
   background-origin: padding-box;
   background-position: 0 0;
@@ -220,6 +236,9 @@ table code {
 p {
   line-height: 1.7;
   margin: 0 0 20px;
+}
+h2 { 
+  margin-bottom: 20px;
 }
 .recent_posts {
   list-style-type: disc;
