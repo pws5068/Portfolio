@@ -17,7 +17,7 @@ layout: default
       {% assign index = true %}
       {% for post in paginator.posts %}
       {% assign content = post.content %}
-        <article class="span4">
+        <article class="span4" style="overflow:none">
           {% include article.html %}
         </article>
       {% endfor %}
