@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-02-24T17:56:00-08:00</updated>
+  <updated>2013-03-12T00:45:52-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -197,27 +197,25 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
     <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
-    <content type="html"><![CDATA[<p>A few coworkers and I set out one weekend to the lumber yard.  Our goal? To awesome-ify our office.  Specifically, we set out to turn this post (to the left) into a rock climbing wall.</p>
+    <content type="html"><![CDATA[<p>One late evening at the office, myself and a few coworkers realized our office was definitely missing
+something. But what?  We had a kitchen, a developer room, fantastic views and great culture. Of course,
+when we put our minds to it the answer was so clear &#8211; a rock climbing wall.</p>
 
-<p>Now as it turned out, the concrete posts are actually in place to surround the support beam inside. <!-- more --> The concrete itself is very weak and is crumbling in various places.  So it wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.</p>
+<p>So, on a whim I found a tape measure and sketched up some plans for the new addition.  We decided
+to turn the post shown below into our wall.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
-<p>So (with my limited construction experience) I sketched out some plans to construct a wood frame tightly around the
-beam in it&#8217;s entirety.</p>
+<p>Now as it turned out, the concrete posts are actually in place to wrap the support beam inside. <!-- more --> The concrete itself is very weak and is crumbling.  It wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.  Instead, we decided to construct a frame around the pillar.</p>
 
-<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="350" title="Rough Construction Plan" >
-<img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/cutting_lumber.jpg" width="350" title="Halfway Done" ></p>
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="350" title="Rough Construction Plan" ></p>
 
 <p>The wall is designed to be supported only by frame itself, and is not anchored to the beam in any way.  The main concern here was that the frame could move when weighted.</p>
 
-<p>Fortunately we measured twice and cut once, the frame wrapped tightly around the support beam and is amazingly stable (even with 2 or 3 of us climbing at once).</p>
+<p>I recruited some friends to help along with a coworker, the famous Doc Pop.  While he and I drilled &amp; assembled the frame, the our friends prepared the panels.  They started by mixing some fine grained sand with the black paint we had chosen and adding several coats.  The texture worked out amazingly strong, clean and featured.</p>
 
-<p>The plans weren&#8217;t perfect however, I made a calculation typo in the measurements of the plywood walls leaving a slight gap on one side of the pillar.  After a few paint touch ups the mistake is hardly noticeable and even provides another feature to use for certain climbing routes.</p>
-
-<p>I recruited some friends to help along with a coworker, the famous Doc Pop.  While he and I drilled &amp; assembled the frame, the girls prepared the panels.  They started by mixing some fine grained sand with the black paint we had chosen and adding several coats.  The texture worked out amazingly strong, clean and featured.</p>
-
-<p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="300">
+<img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
 <img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg" width="300" title="Halfway Done" ></p>
 
 <p>Then they marked up the back of the panels with locations for our predrilled hold placement options.</p>
@@ -226,8 +224,7 @@ beam in it&#8217;s entirety.</p>
 
 <p>Placing the holds was of course the most exciting part&#8230; and the moment of truth &#8230; standing on wall for the first time.  The climbing holds bolted in nicely and didn&#8217;t budge when weighted.  Success.</p>
 
-<p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/gina_preparing_wall.jpg" width="300" title="Asdfsdf Done" >
-<img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="300" title="Asdfsdf Done" ></p>
+<p>The plans weren&#8217;t perfect however, I made a calculation typo in the measurements of the plywood walls leaving a slight gap on one side of the pillar.  After a few paint touch ups the mistake is hardly noticeable and even provides another crack-like feature to use for certain climbing routes.</p>
 
 <p><img src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/completed_project.png" width="300">
 <img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg" width="300"></p>
