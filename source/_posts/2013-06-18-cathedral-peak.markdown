@@ -10,15 +10,13 @@ categories: climbing
 
 Apparently, Eric had his sights set on the classic Cathedral Peak of Yosemite.
 
-To this point, I had followed him on a multi-pitch once. I'd lead two local outdoors sport routes .. each in the ballpark of 25-30 feet high.
-
-Cathedral Peak? Eric, that's over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.
+To this point, I had followed him on a multi-pitch once. I'd lead two local outdoors sport routes .. each in the ballpark of 25-30 feet high.  Cathedral Peak? That's over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.
 
 {% img left /images/posts/pages/climbing/cathedral_peak/cathedral_west.jpg 300 Cathedral Peak from the West %}
 
-A few days later we embarked with two other friends to Yosemite, Andrew and Daniel. Eric and I met Andrew on our bouldering trip to Bishop a few months back. And Daniel I'd met briefly on a Castle Rock day trip.
+A few days later we embarked with two other friends to Yosemite, Andrew and Daniel. Eric and I had met Andrew on our bouldering trip to Bishop a few months back. Daniel and I had met briefly on a Castle Rock day trip.
 
-Originally we had planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we all decided to drop our gear in an open campsite. The temperature dropped to the 30's but we agreed to leave our tents packed to save time in the morning.
+Originally the three of us planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we decided to drop our gear in any open campsite. The temperature dropped to the 30's but we agreed to leave our tents packed to save time in the morning.
 
 {% img left /images/posts/pages/climbing/cathedral_peak/campsite.jpg 450 Campsite %}
 
