@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | Paul Silvis]]></title>
   <link href="http://paulsilvis.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-06-20T00:37:19-07:00</updated>
+  <updated>2013-06-20T00:42:06-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -27,7 +27,7 @@ the internet for some inspiration.</p>
 <!-- more -->
 
 
-<p><img class="left" src="/images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg" width="280"></p>
+<p>{% img left /images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg 280 %}</p>
 
 <p>The most intriguing project I came across was a <a href="http://www.instructables.com/id/Arduino-controlled-Silly-String-shooter/">pumpkin armed with silly string and a motion sensor</a>,
 but given the limited time on hand and dwindling inventory at the local radio shack I
@@ -41,12 +41,12 @@ not approve.</p>
 
 <p>So I started wiring up the components available.</p>
 
-<p><img src="/images/posts/pages/hacks/arduino_hacking/arduino_breadboard.jpg" width="450"></p>
+<p>{% img /images/posts/pages/hacks/arduino_hacking/arduino_breadboard.jpg 450 %}</p>
 
 <p>But, the problem remained .. with no motion sensor how could I hide conspicuously trigger
 the alarm? Easy. By selecting a button as large and irresistable as possible :)</p>
 
-<p><img src="/images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg" width="450"></p>
+<p>{% img /images/posts/pages/hacks/arduino_hacking/finished_hack_o_lantern.jpg 450 %}</p>
 
 <p>The photo above was taken from the entrance to the Sincerely Halloween Party's haunted
 maze.  I used a portable battery pack to power the Arduino &amp; let it loose.</p>
@@ -124,19 +124,19 @@ when we put our minds to it the answer was so clear -- a rock climbing wall.</p>
 <p>So, on a whim I found a tape measure and sketched up some plans for the new addition.  We decided
 to turn the post shown below into our wall.</p>
 
-<p><img class="left" src="/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
+<p>{% img left /images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg 250 Halfway Done %}</p>
 
 <p>Now as it turned out, the concrete posts are actually in place to wrap the support beam inside. <!-- more --> The concrete itself is very weak and is crumbling.  It wouldn't suffice to drill any concrete screws and expect them to support the load.  Instead, we decided to construct a frame around the pillar.</p>
 
-<p><img class="left" src="/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="450" title="Rough Construction Plan" ></p>
+<p>{% img left /images/posts/pages/hacks/office_climbing_wall/construction_plan.png 450 Rough Construction Plan %}</p>
 
 <p>The wall is designed to be supported only by frame itself, and is not anchored to the beam in any way.  The main concern here was that the frame could move when weighted.</p>
 
 <p>I recruited some friends to help along with a coworker, the famous Doc Pop.  While he and I drilled &amp; assembled the frame, the our friends prepared the panels.  They started by mixing some fine grained sand with the black paint we had chosen and adding several coats.  The texture worked out amazingly strong, clean and featured.</p>
 
-<p><img class="left" src="/images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg" width="350">
-<img src="/images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg" width="300" height="300">
-<img src="/images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg" width="300" title="Halfway Done" ></p>
+<p>{% img left /images/posts/pages/hacks/office_climbing_wall/freshly_painted.jpg 350 %}
+{% img /images/posts/pages/hacks/office_climbing_wall/doc_drilling.jpg 300 300 %}
+{% img /images/posts/pages/hacks/office_climbing_wall/inc_climbing_wall_halfway.jpg 300 Halfway Done %}</p>
 
 <p>Then they marked up the back of the panels with locations for our predrilled hold placement options.</p>
 
@@ -146,8 +146,8 @@ to turn the post shown below into our wall.</p>
 
 <p>The plans weren't perfect however, I made a calculation typo in the measurements of the plywood walls leaving a slight gap on one side of the pillar.  After a few paint touch ups the mistake is hardly noticeable and even provides another crack-like feature to use for certain climbing routes.</p>
 
-<p><img src="/images/posts/pages/hacks/office_climbing_wall/completed_project.png" width="400">
-<img class="left" src="/images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg" width="400"></p>
+<p>{% img /images/posts/pages/hacks/office_climbing_wall/completed_project.png 400 %}
+{% img left /images/posts/pages/hacks/office_climbing_wall/paul_by_wall.jpg 400 %}</p>
 ]]></content>
   </entry>
   
