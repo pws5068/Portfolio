@@ -1,13 +1,13 @@
 $(function(){
   $('[rel="tooltip"]').tooltip();
 
-  if ( window.location.pathname == '/' ) {
-    $('[rel="tooltip"]').hover(
-      function () {
-        $('.tooltip.top').addClass("home");
-      }
-    );
-  }
+  //if ( window.location.pathname == '/' ) {
+  //  $('[rel="tooltip"]').hover(
+  //    function () {
+  //      //$('.tooltip.top').addClass("home");
+  //    }
+  //  );
+  //}
 
   $(".tweet").tweet({
     username: $('.tweet').data('twitter-user'),
