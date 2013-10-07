@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hacks | Paul Silvis]]></title>
   <link href="http://paulsilvis.com/blog/categories/hacks/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-10-06T22:05:46-07:00</updated>
+  <updated>2013-10-07T00:23:49-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -19,13 +19,10 @@
     <updated>2012-11-14T14:29:00-08:00</updated>
     <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
     <content type="html"><![CDATA[<p>I wanted to try something a little different for Halloween this year,
-and I've been looking to get my hands dirty with more arduino hacking projects.</p>
+and I've been looking to get my hands dirty with more arduino hacking projects.<!-- more --></p>
 
 <p>Of course, I'm not the first person to consider hacking a pumpkin so I took to
 the internet for some inspiration.</p>
-
-<!-- more -->
-
 
 <p>{% img left /images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg 280 %}</p>
 
@@ -113,12 +110,12 @@ void loop()
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Sincerely Office Climbing Wall]]></title>
+    <title type="html"><![CDATA[Office Climbing Wall]]></title>
     <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
     <content type="html"><![CDATA[<p>One late evening at the office, myself and a few coworkers realized our office was definitely missing
-something. But what?  We had a kitchen, an office dog and fantastic views. When we put our minds to it the answer was so clear -- a rock climbing wall!<!-- more --></p>
+something. We had a kitchen, an office dog and fantastic views. When we put our minds to it the answer was so clear -- a rock climbing wall!<!-- more --></p>
 
 <p>So, on a whim I found a tape measure and sketched up some plans for the new addition.  We decided
 to turn the post shown below into our wall.</p>
