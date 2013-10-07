@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-07-09T21:28:05-07:00</updated>
+  <updated>2013-10-06T22:05:45-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -14,21 +14,96 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Git Bisect, Life-Saver]]></title>
+    <link href="http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day"/>
+    <updated>2013-08-16T23:32:00-07:00</updated>
+    <id>http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day</id>
+    <content type="html"><![CDATA[<p><a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">Git Bisect</a> the tool you never knew you needed but shouldn&#8217;t live without.</p>
+
+<p>Earlier today I was hunting down a display issue in the <a href="https://itunes.apple.com/us/app/ink-cards-personalized-greeting/id477296657">Sincerely Ink</a> iphone app. The problem was small but multi-faceted so a few files were changed in the process.<!-- more --> After fixing the problem, I switched gears &amp; worked on refactoring some duplicate code into shared submodules.</p>
+
+<p>A few hours later I noticed a strange new UI issue in the iPad version of the app.  None of my commits <em>should</em> have affected the iPad version &#8230; and I couldn&#8217;t see any obvious culprit.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="err">$</span> <span class="n">git</span> <span class="n">log</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">commit</span> <span class="mf">239f</span><span class="mi">095788</span><span class="n">d37f40d9e6438d18ff337f4db2649</span>
+</span><span class='line'><span class="nl">Author:</span> <span class="n">Paul</span> <span class="n">Silvis</span> <span class="o">&lt;</span><span class="n">paulsilvis</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
+</span><span class='line'><span class="nl">Date:</span>   <span class="n">Fri</span> <span class="n">Aug</span> <span class="mi">16</span> <span class="mi">12</span><span class="o">:</span><span class="mi">57</span><span class="o">:</span><span class="mi">39</span> <span class="mi">2013</span> <span class="o">-</span><span class="mo">0700</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">fixing</span> <span class="n">NUX</span> <span class="p">(</span><span class="n">nib</span> <span class="n">name</span> <span class="n">recently</span> <span class="n">changed</span> <span class="n">in</span> <span class="n">c7aa42</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">commit</span> <span class="mi">5268</span><span class="n">b90c048b6690dfe940f96463dbeb0842decc</span>
+</span><span class='line'><span class="nl">Author:</span> <span class="n">Paul</span> <span class="n">Silvis</span> <span class="o">&lt;</span><span class="n">paulsilvis</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
+</span><span class='line'><span class="nl">Date:</span>   <span class="n">Fri</span> <span class="n">Oct</span> <span class="mi">16</span> <span class="mi">11</span><span class="o">:</span><span class="mi">36</span><span class="o">:</span><span class="mi">15</span> <span class="mi">2013</span> <span class="o">-</span><span class="mo">0700</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">Deep</span> <span class="n">links</span><span class="o">:</span> <span class="n">side</span> <span class="n">panel</span> <span class="n">jump</span> <span class="n">to</span> <span class="n">cached</span> <span class="n">view</span> <span class="n">controller</span> <span class="k">if</span> <span class="n">exists</span>
+</span><span class='line'><span class="p">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">commit</span> <span class="mi">92</span><span class="n">decce5d7a824da3eb8a1131654a70d59c832a6</span>
+</span><span class='line'><span class="nl">Author:</span> <span class="n">Paul</span> <span class="n">Silvis</span> <span class="o">&lt;</span><span class="n">paulsilvis</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
+</span><span class='line'><span class="nl">Date:</span>   <span class="n">Thu</span> <span class="n">Aug</span> <span class="mi">15</span> <span class="mi">19</span><span class="o">:</span><span class="mi">11</span><span class="o">:</span><span class="mi">52</span> <span class="mi">2013</span> <span class="o">-</span><span class="mo">0700</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">rewriting</span> <span class="n">deep</span> <span class="n">link</span> <span class="n">handling</span> <span class="n">to</span> <span class="n">support</span> <span class="n">the</span> <span class="n">side</span> <span class="n">panel</span> <span class="o">&amp;</span> <span class="n">various</span> <span class="n">fixes</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Well, none of the recent commits are very suspect. Lets take a step back, I <em>know</em> the iPad UI displayed properly this morning.</p>
+
+<p>Enter git bisect:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="err">$</span> <span class="n">git</span> <span class="n">bisect</span> <span class="n">start</span>
+</span><span class='line'><span class="err">$</span> <span class="n">git</span> <span class="n">bisect</span> <span class="n">bad</span> <span class="mi">4</span><span class="n">db2649</span>
+</span><span class='line'><span class="err">$</span> <span class="n">git</span> <span class="n">bisect</span> <span class="n">good</span> <span class="n">c832a6</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lets look at what we just did here. We showed git bisect that we&#8217;re experiencing a problem which was introduced sometime between the <em>good</em> commit from yesterday and the a <em>bad</em> one where the problem exists.</p>
+
+<p>Now the magic happens. Git bisect will divide and conquer; selecting a commit near the middle and temporarily reverting.  If the issue still exists simply type &#8220;git bisect bad&#8221; (vs. good) to test another potential culprit. Git bisect will notify you when it&#8217;s found the offender and typing &#8220;git bisect reset&#8221; will return to your starting point.</p>
+
+<p>Viola! Git bisect has handled the heavy lifting and tracked down the problem in the optimal number of steps.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Cathedral Peak]]></title>
-    <link href="http://paulsilvis.com/blog/2013/06/18/cathedral-peak/"/>
+    <link href="http://paulsilvis.com/blog/2013/06/18/cathedral-peak"/>
     <updated>2013-06-18T08:36:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2013/06/18/cathedral-peak</id>
-    <content type="html"><![CDATA[<p>&#8220;Ready to scratch those cams?&#8221; Eric asked out of the blue. I wasn&#8217;t sure exactly what he had in mind.. but after a few dozen expeditions with the guy I&#8217;ve learned to simply answer, &#8220;Yes.&#8221;</p>
+    <content type="html"><![CDATA[<p>&#8220;Ready to scratch those cams?&#8221; Eric asked out of the blue. I wasn&#8217;t sure exactly what he had in mind.. but after a few dozen expeditions with the guy I&#8217;ve learned to simply answer, &#8220;Yes.&#8221;<!-- more --></p>
 
 <p>Apparently, Eric had his sights set on the classic Cathedral Peak of Yosemite.</p>
 
-<p>To this point, I had followed him on a multi-pitch once. I had led two local outdoors sport routes .. each in the ballpark of 25-30 feet high. <!-- more --> But Cathedral Peak? That&#8217;s over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.</p>
+<p>To this point, I had followed him on a multi-pitch once. I had led two local outdoors sport routes .. each in the ballpark of 25-30 feet high. But Cathedral Peak? That&#8217;s over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/climbing/cathedral_peak/cathedral_west.jpg" width="300" title="Cathedral Peak from the West" ></p>
 
 <p>A few days later we embarked with two other friends (Andrew and Daniel) to Yosemite. Eric and I had met Andrew on our bouldering trip to Bishop a few months back; Daniel and I had met briefly on a Castle Rock day trip.</p>
 
-<p>Originally the three of us planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we decided to drop our gear in any open campsite. The temperature fell to the 30&#8217;s but we agreed to leave our tents to save time in the morning.</p>
+<p>Originally the three of us planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we decided to drop our gear in any open campsite. The temperature fell to the 30&#8217;s but we ditched our tents to save time in the morning.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/climbing/cathedral_peak/campsite.jpg" width="450" title="Campsite" ></p>
 
@@ -73,41 +148,8 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Thoughtfulitics]]></title>
-    <link href="http://paulsilvis.com/blog/2012/12/17/thoughtfulitics/"/>
-    <updated>2012-12-17T23:34:00-08:00</updated>
-    <id>http://paulsilvis.com/blog/2012/12/17/thoughtfulitics</id>
-    <content type="html"><![CDATA[<p><a href="https://Sincerely.com">Sincerely Inc.</a> recently hosted our first Make-a-Thon.
-Similar in nature to a hack-a-thon, except that we wanted to make sure everyone
-in the company could participate.</p>
-
-<p>Each team had the opportunity to discuss ideas before the event, and we officially
-kicked off the event on Thursday at noon.  JJ Ford and myself teamed up, along with
-Zain Ali for some kick ass design work.</p>
-
-<!-- more -->
-
-
-<p>At Sincerely our mission is to make the world more thoughtful, and our
-philosophy is to make informed data-driven decisions. So, we decided to
-build an analytics engine around the thoughtfulness of our customers and
-the world.</p>
-
-<p>JJ and I chose to create the project in Rails for fast prototyping.</p>
-
-<p>As the project began I started building a network interface for Sincerely&#8217;s
-internal api and he reverse engineered a JS liquid animation from the wild.</p>
-
-<p><img class="left" src="http://paulsilvis.com/images/posts/pages/thoughtfulitics/thoughtful_scale.png" width="600"></p>
-
-<p>On the live page, the gears above are turning and the thoughtful-juices are flowing..
-but you&#8217;ll just have to use your imagination ;-)</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Hack-o-Lantern]]></title>
-    <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern/"/>
+    <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern"/>
     <updated>2012-11-14T14:29:00-08:00</updated>
     <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
     <content type="html"><![CDATA[<p>I wanted to try something a little different for Halloween this year,
@@ -253,19 +295,18 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
   
   <entry>
     <title type="html"><![CDATA[Sincerely Office Climbing Wall]]></title>
-    <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall/"/>
+    <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall"/>
     <updated>2012-10-24T22:16:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
     <content type="html"><![CDATA[<p>One late evening at the office, myself and a few coworkers realized our office was definitely missing
-something. But what?  We had a kitchen, a developer room, fantastic views and great culture. Of course,
-when we put our minds to it the answer was so clear &#8211; a rock climbing wall.</p>
+something. But what?  We had a kitchen, an office dog and fantastic views. When we put our minds to it the answer was so clear &#8211; a rock climbing wall!<!-- more --></p>
 
 <p>So, on a whim I found a tape measure and sketched up some plans for the new addition.  We decided
 to turn the post shown below into our wall.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/original_pillar.jpg" width="250" title="Halfway Done" ></p>
 
-<p>Now as it turned out, the concrete posts are actually in place to wrap the support beam inside. <!-- more --> The concrete itself is very weak and is crumbling.  It wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.  Instead, we decided to construct a frame around the pillar.</p>
+<p>Now as it turned out, the concrete posts are actually in place to wrap the support beam inside. The concrete itself is very weak and is crumbling.  It wouldn&#8217;t suffice to drill any concrete screws and expect them to support the load.  Instead, we decided to construct a frame around the pillar.</p>
 
 <p><img class="left" src="http://paulsilvis.com/images/posts/pages/hacks/office_climbing_wall/construction_plan.png" width="450" title="Rough Construction Plan" ></p>
 
