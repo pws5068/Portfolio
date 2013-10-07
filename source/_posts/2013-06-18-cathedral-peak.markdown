@@ -16,7 +16,7 @@ To this point, I had followed him on a multi-pitch once. I had led two local out
 
 A few days later we embarked with two other friends (Andrew and Daniel) to Yosemite. Eric and I had met Andrew on our bouldering trip to Bishop a few months back; Daniel and I had met briefly on a Castle Rock day trip.
 
-Originally the three of us planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we decided to drop our gear in any open campsite. The temperature fell to the 30's but we agreed to leave our tents to save time in the morning.
+Originally the three of us planned to stealth camp in Tuolumne meadows, but when we arrived late Friday night we decided to drop our gear in any open campsite. The temperature fell to the 30's but we ditched our tents to save time in the morning.
 
 {% img left /images/posts/pages/climbing/cathedral_peak/campsite.jpg 450 Campsite %}
 
