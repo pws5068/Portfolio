@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-10-07T00:23:48-07:00</updated>
+  <updated>2013-10-11T15:35:57-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -14,13 +14,15 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Git Bisect, Life-Saver]]></title>
+    <title type="html"><![CDATA[Git Bisect]]></title>
     <link href="http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day"/>
     <updated>2013-08-16T23:32:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day</id>
     <content type="html"><![CDATA[<p><a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">Git Bisect</a> the tool you never knew you needed but shouldn&#8217;t live without.</p>
 
-<p>Earlier today I was hunting down a display issue in the <a href="https://itunes.apple.com/us/app/ink-cards-personalized-greeting/id477296657">Sincerely Ink</a> iphone app. The problem was small but multi-faceted so a few files were changed in the process.<!-- more --> After fixing the problem, I switched gears &amp; worked on refactoring some duplicate code into shared submodules.</p>
+<p>In short, bisect allows you to find the commit that introduced a bug or unexpected side-effect without reading through hundreds of lines of diffs. <!-- more -->Git bisect automates this process by jumping between commits and allowing you to run your project to see if the bug is still there.  Lets see one scenario where this comes in handy.</p>
+
+<p>Earlier today I was hunting down a display issue in the <a href="https://itunes.apple.com/us/app/ink-cards-personalized-greeting/id477296657">Sincerely Ink</a> iphone app. The problem was small but multi-faceted so a few files were changed in the process. After fixing the problem, I switched gears &amp; worked on refactoring some duplicate code into shared submodules.</p>
 
 <p>A few hours later I noticed a strange new UI issue in the iPad version of the app.  None of my commits <em>should</em> have affected the iPad version &#8230; and I couldn&#8217;t see any obvious culprit.</p>
 
@@ -44,6 +46,7 @@
 <span class='line-number'>18</span>
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
+<span class='line-number'>21</span>
 </pre></td><td class='code'><pre><code class='c'><span class='line'><span class="err">$</span> <span class="n">git</span> <span class="n">log</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">commit</span> <span class="mf">239f</span><span class="mi">095788</span><span class="n">d37f40d9e6438d18ff337f4db2649</span>
@@ -57,7 +60,8 @@
 </span><span class='line'><span class="nl">Date:</span>   <span class="n">Fri</span> <span class="n">Oct</span> <span class="mi">16</span> <span class="mi">11</span><span class="o">:</span><span class="mi">36</span><span class="o">:</span><span class="mi">15</span> <span class="mi">2013</span> <span class="o">-</span><span class="mo">0700</span>
 </span><span class='line'>
 </span><span class='line'>    <span class="n">Deep</span> <span class="n">links</span><span class="o">:</span> <span class="n">side</span> <span class="n">panel</span> <span class="n">jump</span> <span class="n">to</span> <span class="n">cached</span> <span class="n">view</span> <span class="n">controller</span> <span class="k">if</span> <span class="n">exists</span>
-</span><span class='line'><span class="p">...</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">...</span> <span class="mi">5</span> <span class="n">more</span> <span class="n">arbitrary</span> <span class="n">commits</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">commit</span> <span class="mi">92</span><span class="n">decce5d7a824da3eb8a1131654a70d59c832a6</span>
 </span><span class='line'><span class="nl">Author:</span> <span class="n">Paul</span> <span class="n">Silvis</span> <span class="o">&lt;</span><span class="n">paulsilvis</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
@@ -80,9 +84,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Lets look at what we just did here. We showed git bisect that we&#8217;re experiencing a problem which was introduced sometime between the <em>good</em> commit from yesterday and the a <em>bad</em> one where the problem exists.</p>
+<p>Here, we showed git bisect that we&#8217;re experiencing a problem which was introduced sometime between the <em>good</em> commit from yesterday and a <em>bad</em> one from today where the problem exists.</p>
 
-<p>Now the magic happens. Git bisect will divide and conquer; selecting a commit near the middle and temporarily reverting.  If the issue still exists simply type &#8220;git bisect bad&#8221; (vs. good) to test another potential culprit. Git bisect will notify you when it&#8217;s found the offender and typing &#8220;git bisect reset&#8221; will return to your starting point.</p>
+<p>Now the magic happens. Git bisect divides and conquers; selecting a commit near the middle and temporarily reverting.  If the issue still exists simply type &#8220;git bisect bad&#8221; (vs. good) to test another potential culprit. Git bisect will notify you when it&#8217;s found the offender and typing &#8220;git bisect reset&#8221; will return to your starting point.</p>
 
 <p>Viola! Git bisect has handled the heavy lifting and tracked down the problem in the optimal number of steps.</p>
 ]]></content>
