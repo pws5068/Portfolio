@@ -7,12 +7,10 @@ categories: hacks
 ---
 
 I wanted to try something a little different for Halloween this year, 
-and I've been looking to get my hands dirty with more arduino hacking projects.  
+and I've been looking to get my hands dirty with more arduino hacking projects.<!-- more -->
 
 Of course, I'm not the first person to consider hacking a pumpkin so I took to 
 the internet for some inspiration.
-
-<!-- more -->
 
 {% img left /images/posts/pages/hacks/arduino_hacking/lcd_shield_testing.jpg 280 %}
 

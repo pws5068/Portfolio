@@ -6,11 +6,11 @@ comments: true
 categories: climbing
 ---
 
-"Ready to scratch those cams?" Eric asked out of the blue. I wasn't sure exactly what he had in mind.. but after a few dozen expeditions with the guy I've learned to simply answer, "Yes."
+"Ready to scratch those cams?" Eric asked out of the blue. I wasn't sure exactly what he had in mind.. but after a few dozen expeditions with the guy I've learned to simply answer, "Yes."<!-- more -->
 
 Apparently, Eric had his sights set on the classic Cathedral Peak of Yosemite.
 
-To this point, I had followed him on a multi-pitch once. I had led two local outdoors sport routes .. each in the ballpark of 25-30 feet high. <!-- more --> But Cathedral Peak? That's over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.
+To this point, I had followed him on a multi-pitch once. I had led two local outdoors sport routes .. each in the ballpark of 25-30 feet high. But Cathedral Peak? That's over 800 feet. Sure, from the grade perspective a 5.7 crux sounded perfectly reasonable.. but damn.
 
 {% img left /images/posts/pages/climbing/cathedral_peak/cathedral_west.jpg 300 Cathedral Peak from the West %}
 
