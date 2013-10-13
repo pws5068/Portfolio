@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-10-11T15:35:57-07:00</updated>
+  <updated>2013-10-13T18:52:01-04:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Git Bisect]]></title>
     <link href="http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day"/>
-    <updated>2013-08-16T23:32:00-07:00</updated>
+    <updated>2013-08-16T23:32:00-04:00</updated>
     <id>http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day</id>
     <content type="html"><![CDATA[<p><a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">Git Bisect</a> the tool you never knew you needed but shouldn&#8217;t live without.</p>
 
@@ -95,7 +95,7 @@
   <entry>
     <title type="html"><![CDATA[Cathedral Peak]]></title>
     <link href="http://paulsilvis.com/blog/2013/06/18/cathedral-peak"/>
-    <updated>2013-06-18T08:36:00-07:00</updated>
+    <updated>2013-06-18T08:36:00-04:00</updated>
     <id>http://paulsilvis.com/blog/2013/06/18/cathedral-peak</id>
     <content type="html"><![CDATA[<p>&#8220;Ready to scratch those cams?&#8221; Eric asked out of the blue. I wasn&#8217;t sure exactly what he had in mind.. but after a few dozen expeditions with the guy I&#8217;ve learned to simply answer, &#8220;Yes.&#8221;<!-- more --></p>
 
@@ -154,7 +154,7 @@
   <entry>
     <title type="html"><![CDATA[Hack-o-Lantern]]></title>
     <link href="http://paulsilvis.com/blog/2012/11/14/hack-o-lantern"/>
-    <updated>2012-11-14T14:29:00-08:00</updated>
+    <updated>2012-11-14T14:29:00-05:00</updated>
     <id>http://paulsilvis.com/blog/2012/11/14/hack-o-lantern</id>
     <content type="html"><![CDATA[<p>I wanted to try something a little different for Halloween this year,
 and I&#8217;ve been looking to get my hands dirty with more arduino hacking projects.<!-- more --></p>
@@ -297,7 +297,7 @@ everyone at the event in the got a good laugh.  The sketch was pretty simple:</p
   <entry>
     <title type="html"><![CDATA[Office Climbing Wall]]></title>
     <link href="http://paulsilvis.com/blog/2012/10/24/office-climbing-wall"/>
-    <updated>2012-10-24T22:16:00-07:00</updated>
+    <updated>2012-10-24T22:16:00-04:00</updated>
     <id>http://paulsilvis.com/blog/2012/10/24/office-climbing-wall</id>
     <content type="html"><![CDATA[<p>One late evening at the office, myself and a few coworkers realized our office was definitely missing
 something. We had a kitchen, an office dog and fantastic views. When we put our minds to it the answer was so clear &#8211; a rock climbing wall!<!-- more --></p>
