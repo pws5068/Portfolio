@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Submodules vs. Subtrees - Paul Silvis</title>
+  <meta name="author" content="Paul Silvis">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="Let&#8217;s suppose you have two similar projects which share lot of common code. For example, two iPhone apps with the same checkout process.
+Git &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Paul Silvis" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Paul Silvis" />
+  <meta name="og:title" content="Submodules vs. Subtrees" />
+  <meta name="og:description" content="Let&#8217;s suppose you have two similar projects which share lot of common code. For example, two iPhone apps with the same checkout process.
+Git &hellip;" />
+  <meta name="og:url" content="http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees"/>
+  <meta name="url" content="http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees">
+  
+  <meta name="subject" content=""/>
+  <meta name="category" content=""/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">Paul Silvis</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:paulsilvis.com" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Submodules vs. Subtrees</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Paul Silvis</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-12T19:54:00-07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2014</time> - 
+        
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let&#8217;s suppose you have two similar projects which share lot of common code. For example, two iPhone apps with the same checkout process.
+Git offers two powerful options to assist you in preventing duplicate code.<!-- more --></p>
+
+<p>In both cases, you begin by creating a repository for each app and one containing only the shared code. Before implementing either, let&#8217;s
+consider both workflows.</p>
+
+<p><strong>Submodule Workflow</strong>
+Subtrees are relatively straight forward. At a high-level, they are a nested git repository.
+They maintain a separate commit history and separate remotes for ParentProject and CheckoutModule.</p>
+
+<p>When you finish a feature that affects both repositories, your workflow may look like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/CheckoutModule
+</span><span class='line'>$ git commit -am "Added a great new feature!"
+</span><span class='line'>$ git pull origin master
+</span><span class='line'>$ git push origin master 
+</span><span class='line'>
+</span><span class='line'>$ cd ~/ParentProject
+</span><span class='line'>$ git status
+</span><span class='line'>  # On branch master
+</span><span class='line'>  # modified:   CheckoutModule (new commits) 
+</span><span class='line'>  # modified:   index.html
+</span><span class='line'>
+</span><span class='line'>$ git add .
+</span><span class='line'>$ git commit -am "Horray for a new feature in ParentProject!"
+</span><span class='line'>$ git push origin masters</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice that we made two separate commits for one feature. Both projects will maintain a history, which is appealing in some situations and
+painful in others.</p>
+
+<p>When you push the commits upstream, they will go to their own respective repositories. ParentProject simply maintains a reference to hash of the
+CheckoutModule commit that it&#8217;s currently using.</p>
+
+<p><strong>Subtree Workflow</strong></p>
+
+<p>With subtrees, your repositories are organized in the same fashion. ParentProject and CheckoutModule live in their own github repositories.</p>
+
+<p>The difference is that ParentProject believes it is a monolithic repository owning all of the code it needs. Here&#8217;s the workflow:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/
+</span><span class='line'>$ git status
+</span><span class='line'>  # On branch master
+</span><span class='line'>  # modified CheckoutModule/test.html
+</span><span class='line'>  # modified index.html
+</span><span class='line'>$ git add . 
+</span><span class='line'>$ git commit -am "Added the new feature using subtrees"
+</span><span class='line'>$ git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Great, that&#8217;s a pretty standard workflow. Now here&#8217;s</p>
+
+<pre><code>[submodule "CheckoutModule"]
+        path = submodules/checkout_module
+        url = git@github.com:your_username/CheckoutModule.git
+</code></pre>
+
+<p>&#8220;`</p>
+
+<p>Now, ParentProject&#8217;s git knows to maintain a hash pointing at it&#8217;s version of CheckoutModule.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Paul Silvis</span></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-12T19:54:00-07:00" pubdate data-updated="true">Mar 12<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <a class="pull-left" href="/blog/2013/08/16/git-bisect-saves-the-day" title="Previous Post: Git Bisect">&laquo; Git Bisect</a>
+    
+    
+      <a class="pull-right" href="/blog/2014/04/05/traveling-solo" title="Next Post: Traveling Solo">Traveling Solo &raquo;</a>
+    
+  </footer>
+
+</div>
+
+
+      </article>
+    </div>
+    <div class="container">	
+      
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2014/04/05/traveling-solo">Traveling Solo</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/03/12/submodules-vs-subtrees">Submodules vs. Subtrees</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/16/git-bisect-saves-the-day">Git Bisect</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/06/18/cathedral-peak">Cathedral Peak</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2012/11/14/hack-o-lantern">Hack-o-Lantern</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <div class="span4">
+    
+<h2>Twitter</h2>
+<a href="https://twitter.com/paulsilvis" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @paulsilvis</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="tweet" data-twitter-user="paulsilvis">
+</div>
+
+
+  </div>
+  <div class="span2">
+    
+<a href="https://github.com/pws5068/" rel="tooltip" title="Github"><img class="social_icon" title="Github" alt="github icon" src="/images/glyphicons_381_github.png"></a>
+
+
+
+<a href="http://stackoverflow.com/users/214730/pws5068/" rel="tooltip" title="Stack Overflow"><img class="social_icon" title="Stack Overflow" alt="stack overflow icon" src="/images/glyphicons_400_stack_overflow.png"></a>
+
+
+
+<span class="tooltip">
+<a href="http://www.linkedin.com/in/paulsilvis" title="Linkedin">
+  <img class="social_icon" title="Linkedin" alt="Linkedin icon" src="/images/glyphicons_377_linked_in.png">
+</a>
+</span>
+
+
+
+<a href="http://twitter.com/paulsilvis" rel="tooltip" title="Twitter"><img class="social_icon" title="Twitter" alt="Twitter icon" src="/images/glyphicons_391_twitter_t.png"></a>
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Paul Silvis</a>
+  - Copyright &copy; 2014 - Paul Silvis
+</p>
+<p class="pull-right">
+  <span>Powered by <a href="http://octopress.org/">Octopress</a>.</span>
+  
+    <span>Designed by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>.</span>
+  
+</p>
+
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+
+
+
+</body>
+</html>

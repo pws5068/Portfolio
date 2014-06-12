@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2013-10-17T12:24:39-07:00</updated>
+  <updated>2014-06-12T16:53:00-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -14,13 +14,148 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Traveling Solo]]></title>
+    <link href="http://paulsilvis.com/blog/2014/04/05/traveling-solo"/>
+    <updated>2014-04-05T11:30:00-07:00</updated>
+    <id>http://paulsilvis.com/blog/2014/04/05/traveling-solo</id>
+    <content type="html"><![CDATA[<p>For the past couple years I&#8217;ve been curious about the notion of solo-travel. The goal has always been to learn more about the world, and more importantly &#8211; about myself.</p>
+
+<p>The destination was an easy choice, Thailand piqued my interest on many levels.<!-- more --> The cultural aspect would be totally foreign to me. The weather in Thailand is tropical with beautiful emerald water, and giant limestone karst (rock formations) protruding from the ocean. This of course brings me to the theme of my trip, Thailand is an international climbing destination. It&#8217;s every climber&#8217;s vision of paradise.</p>
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/thailand/deep_water_solo.jpg" width="600" title="Deep Water Soloing in Ton Sai" ></p>
+
+<p>Stepping onto the plane I felt vastly unprepared for the next month of backpacker life. I had only booked one night of accomodations booked in the northern city of Chiang Mai. The climbing rope consumed half of my backpack space and I carried a total of 3 shirts, one pair of shorts, 3 pairs of socks and two spare pairs of boxers. The notebook in my pocket had a page titled &#8220;Thailand itinerary&#8221; .. with no other notes.</p>
+
+<h2>Chiang Mai</h2>
+
+<p>I arrived in Chiang Mai around 8pm and withdrew 10,000 baht (around $300) and hopped in the nearest taxi. Despite the jet lag, I was anxious to walk around and get a feel for the area. Chiang Mai is a fascinating city. A moat and sections of defensive walls still surround the city from historical threat from Burma and the Mongol Empire decades ago. I spent the first day exploring the city and visiting dozens of ancient Buddhist Temples.</p>
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/thailand/chiang_mai_temple.jpg" width="600" title="Chiang Mai Watt" ></p>
+
+<p>The next morning, I showed up at Chiang Mai Rock Climbing Adventures and by some stroke of luck, ran into someone posting an ad for a climbing partner. The next day we took a song tao (basically an enclosed pickup truck) to Crazy Horse climbing area. The climbing was well bolted, well featured and a good intro to sport-climbing on limestone.</p>
+
+<p>Everyone I met in Chiang Mai, travelers and locals alike, were friendly and laid back. Thai culture is very warm-hearted and welcoming. If you climb in Chiang Mai, you must spend a day on Heart Wall. Trust me on this one.</p>
+
+<p>After 5 days, it was time to head south. Leaving a place like Chiang Mai is never easy, but the excitement for new experiences builds. I booked an overnight bus ride to Bangkok.</p>
+
+<h2>Ton Sai</h2>
+
+<p>After a short visit in Bangkok I was very ready to leave. The constant solicitation for buying stuff and tuk tuks on Khaosan road was far too much for me. It felt as though the Thai culture in the area was replaced by western greed. My time here was short, so your mileage may vary.</p>
+
+<p>Another long bus ride delivered me south to Krabi, Ao Nang, and then finally to the rock climbing mecca. Ton Sai maintains its backpacker feel compared to the other touristy beaches on the Phra Nang Peninsula. I felt right at home in my tent over the next three weeks.</p>
+
+<p>Upon arrival, I met up with a friend from Chiang Mai. He introduced me to <a href="http://madaleine.wordpress.com/">Madelin Sorkin</a>, a professional big-wall climber and her girlfriend. They were awesome enough let me third-wheel for a few days after he left and introduce me to a fascinating new friend named <a href="http://vanation.blogspot.com/">Elodie</a>.</p>
+
+<p>Elodie introduced me to her crew who I spent the remainder of the trip with. In short; we climbed all the things.</p>
+
+<p><img class="left" src="http://paulsilvis.com/images/posts/pages/thailand/the_crew.jpg" width="600" title="Our crew" ></p>
+
+<h2>Lessons Learned</h2>
+
+<p>The serenity of Thailand and freedom of my own schedule enabled me to reflect on life more clearly. I spent a lot of time weighing the importance of career-building versus siezing the freedom to live &amp; explore the world. I&#8217;m intrigued by several friends on both extremes of the spectrum. The not-so-profound take away here is to keep your mind active and do what makes you happy.</p>
+
+<p>I also recognized the importance of living in the moment. It&#8217;s all too easy to reminiss of home when you&#8217;re abroad, and dream about travel when you&#8217;re home. Life is too short to be detached.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Submodules vs. Subtrees]]></title>
+    <link href="http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees"/>
+    <updated>2014-03-12T19:54:00-07:00</updated>
+    <id>http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees</id>
+    <content type="html"><![CDATA[<p>Let&#8217;s suppose you have two similar projects which share lot of common code. For example, two iPhone apps with the same checkout process.
+Git offers two powerful options to assist you in preventing duplicate code.<!-- more --></p>
+
+<p>In both cases, you begin by creating a repository for each app and one containing only the shared code. Before implementing either, let&#8217;s
+consider both workflows.</p>
+
+<p><strong>Submodule Workflow</strong>
+Subtrees are relatively straight forward. At a high-level, they are a nested git repository.
+They maintain a separate commit history and separate remotes for ParentProject and CheckoutModule.</p>
+
+<p>When you finish a feature that affects both repositories, your workflow may look like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/CheckoutModule
+</span><span class='line'>$ git commit -am "Added a great new feature!"
+</span><span class='line'>$ git pull origin master
+</span><span class='line'>$ git push origin master 
+</span><span class='line'>
+</span><span class='line'>$ cd ~/ParentProject
+</span><span class='line'>$ git status
+</span><span class='line'>  # On branch master
+</span><span class='line'>  # modified:   CheckoutModule (new commits) 
+</span><span class='line'>  # modified:   index.html
+</span><span class='line'>
+</span><span class='line'>$ git add .
+</span><span class='line'>$ git commit -am "Horray for a new feature in ParentProject!"
+</span><span class='line'>$ git push origin masters</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice that we made two separate commits for one feature. Both projects will maintain a history, which is appealing in some situations and
+painful in others.</p>
+
+<p>When you push the commits upstream, they will go to their own respective repositories. ParentProject simply maintains a reference to hash of the
+CheckoutModule commit that it&#8217;s currently using.</p>
+
+<p><strong>Subtree Workflow</strong></p>
+
+<p>With subtrees, your repositories are organized in the same fashion. ParentProject and CheckoutModule live in their own github repositories.</p>
+
+<p>The difference is that ParentProject believes it is a monolithic repository owning all of the code it needs. Here&#8217;s the workflow:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/
+</span><span class='line'>$ git status
+</span><span class='line'>  # On branch master
+</span><span class='line'>  # modified CheckoutModule/test.html
+</span><span class='line'>  # modified index.html
+</span><span class='line'>$ git add . 
+</span><span class='line'>$ git commit -am "Added the new feature using subtrees"
+</span><span class='line'>$ git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Great, that&#8217;s a pretty standard workflow. Now here&#8217;s</p>
+
+<pre><code>[submodule "CheckoutModule"]
+        path = submodules/checkout_module
+        url = git@github.com:your_username/CheckoutModule.git
+</code></pre>
+
+<p>&#8220;`</p>
+
+<p>Now, ParentProject&#8217;s git knows to maintain a hash pointing at it&#8217;s version of CheckoutModule.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Git Bisect]]></title>
     <link href="http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day"/>
     <updated>2013-08-16T23:32:00-07:00</updated>
     <id>http://paulsilvis.com/blog/2013/08/16/git-bisect-saves-the-day</id>
     <content type="html"><![CDATA[<p><a href="https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html">Git Bisect</a> the tool you never knew you needed but shouldn&#8217;t live without.</p>
 
-<p>In short, bisect allows you to find the commit that introduced a bug or unexpected side-effect without reading through hundreds of lines of diffs. <!-- more -->Git bisect automates this process by jumping between commits and allowing you to run your project to see if the bug is still there.  Lets see one scenario where this comes in handy.</p>
+<p>In short, bisect allows you to find the commit that introduced a bug or unexpected side-effect without reading through hundreds of lines of diffs. <!-- more -->Git bisect automates this process by jumping between a range of commits and allowing you to run your project to see if the bug is still there. Lets see one scenario where this comes in handy.</p>
 
 <p>Earlier today I was hunting down a display issue in the <a href="https://itunes.apple.com/us/app/ink-cards-personalized-greeting/id477296657">Sincerely Ink</a> iphone app. The problem was small but multi-faceted so a few files were changed in the process. After fixing the problem, I switched gears &amp; worked on refactoring some duplicate code into shared submodules.</p>
 
