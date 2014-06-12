@@ -8,7 +8,7 @@ categories:
 
 [Git Bisect](https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html) the tool you never knew you needed but shouldn't live without.
 
-In short, bisect allows you to find the commit that introduced a bug or unexpected side-effect without reading through hundreds of lines of diffs. <!-- more -->Git bisect automates this process by jumping between commits and allowing you to run your project to see if the bug is still there.  Lets see one scenario where this comes in handy.
+In short, bisect allows you to find the commit that introduced a bug or unexpected side-effect without reading through hundreds of lines of diffs. <!-- more -->Git bisect automates this process by jumping between a range of commits and allowing you to run your project to see if the bug is still there. Lets see one scenario where this comes in handy.
 
 Earlier today I was hunting down a display issue in the [Sincerely Ink](https://itunes.apple.com/us/app/ink-cards-personalized-greeting/id477296657) iphone app. The problem was small but multi-faceted so a few files were changed in the process. After fixing the problem, I switched gears & worked on refactoring some duplicate code into shared submodules.
 
