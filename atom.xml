@@ -4,7 +4,7 @@
   <title><![CDATA[Paul Silvis]]></title>
   <link href="http://paulsilvis.com/atom.xml" rel="self"/>
   <link href="http://paulsilvis.com/"/>
-  <updated>2014-06-12T16:53:00-07:00</updated>
+  <updated>2014-06-12T16:56:39-07:00</updated>
   <id>http://paulsilvis.com/</id>
   <author>
     <name><![CDATA[Paul Silvis]]></name>
@@ -55,96 +55,6 @@
 <p>The serenity of Thailand and freedom of my own schedule enabled me to reflect on life more clearly. I spent a lot of time weighing the importance of career-building versus siezing the freedom to live &amp; explore the world. I&#8217;m intrigued by several friends on both extremes of the spectrum. The not-so-profound take away here is to keep your mind active and do what makes you happy.</p>
 
 <p>I also recognized the importance of living in the moment. It&#8217;s all too easy to reminiss of home when you&#8217;re abroad, and dream about travel when you&#8217;re home. Life is too short to be detached.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Submodules vs. Subtrees]]></title>
-    <link href="http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees"/>
-    <updated>2014-03-12T19:54:00-07:00</updated>
-    <id>http://paulsilvis.com/blog/2014/03/12/submodules-vs-subtrees</id>
-    <content type="html"><![CDATA[<p>Let&#8217;s suppose you have two similar projects which share lot of common code. For example, two iPhone apps with the same checkout process.
-Git offers two powerful options to assist you in preventing duplicate code.<!-- more --></p>
-
-<p>In both cases, you begin by creating a repository for each app and one containing only the shared code. Before implementing either, let&#8217;s
-consider both workflows.</p>
-
-<p><strong>Submodule Workflow</strong>
-Subtrees are relatively straight forward. At a high-level, they are a nested git repository.
-They maintain a separate commit history and separate remotes for ParentProject and CheckoutModule.</p>
-
-<p>When you finish a feature that affects both repositories, your workflow may look like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/CheckoutModule
-</span><span class='line'>$ git commit -am "Added a great new feature!"
-</span><span class='line'>$ git pull origin master
-</span><span class='line'>$ git push origin master 
-</span><span class='line'>
-</span><span class='line'>$ cd ~/ParentProject
-</span><span class='line'>$ git status
-</span><span class='line'>  # On branch master
-</span><span class='line'>  # modified:   CheckoutModule (new commits) 
-</span><span class='line'>  # modified:   index.html
-</span><span class='line'>
-</span><span class='line'>$ git add .
-</span><span class='line'>$ git commit -am "Horray for a new feature in ParentProject!"
-</span><span class='line'>$ git push origin masters</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Notice that we made two separate commits for one feature. Both projects will maintain a history, which is appealing in some situations and
-painful in others.</p>
-
-<p>When you push the commits upstream, they will go to their own respective repositories. ParentProject simply maintains a reference to hash of the
-CheckoutModule commit that it&#8217;s currently using.</p>
-
-<p><strong>Subtree Workflow</strong></p>
-
-<p>With subtrees, your repositories are organized in the same fashion. ParentProject and CheckoutModule live in their own github repositories.</p>
-
-<p>The difference is that ParentProject believes it is a monolithic repository owning all of the code it needs. Here&#8217;s the workflow:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd ~/ParentProject/
-</span><span class='line'>$ git status
-</span><span class='line'>  # On branch master
-</span><span class='line'>  # modified CheckoutModule/test.html
-</span><span class='line'>  # modified index.html
-</span><span class='line'>$ git add . 
-</span><span class='line'>$ git commit -am "Added the new feature using subtrees"
-</span><span class='line'>$ git push origin master</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Great, that&#8217;s a pretty standard workflow. Now here&#8217;s</p>
-
-<pre><code>[submodule "CheckoutModule"]
-        path = submodules/checkout_module
-        url = git@github.com:your_username/CheckoutModule.git
-</code></pre>
-
-<p>&#8220;`</p>
-
-<p>Now, ParentProject&#8217;s git knows to maintain a hash pointing at it&#8217;s version of CheckoutModule.</p>
 ]]></content>
   </entry>
   
