@@ -3,7 +3,7 @@ layout: post
 title: "Git Bisect"
 date: 2013-08-16 23:32
 comments: true
-categories: 
+categories: code, git
 ---
 
 [Git Bisect](https://www.kernel.org/pub/software/scm/git/docs/git-bisect.html) the tool you never knew you needed but shouldn't live without.
